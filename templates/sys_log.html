@@ -1,0 +1,71 @@
+{% extends "layout/base.html" %}
+{% block head %}
+<title>index page</title>
+{% endblock %}
+
+{% block main %}
+
+
+    <main class="app-content">
+    	
+	<div class="app-title">
+	    <div>
+	      <h1>运行日志</h1>
+	    </div>
+    </div>
+    
+    <div class="tile col-md-10 col-sm-12 col-xs-12" style="margin: 0 auto;">
+    	<div class="tile-body row">
+    		<div class="col-md-12">
+    			<div>
+    				<label class="control-label a_label" style="float: left;">开启：</label>
+    				<div class="toggle-flip" style="float: left;">
+		                <label>
+		                    <input type="checkbox"><span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+		                </label>
+					</div>
+					<a href="" class="btn btn-info btn-sm" style="margin-left: 1em;">导出日志</a>
+					<div class="clearfix"></div>
+    			</div>
+              	<div>
+    				<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>时间</th>
+								<th>类型</th>
+								<th>内容</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>2018-09-04 18:85:15</td>
+								<td>目标识别模块</td>
+								<td>192.168.1.1 login</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>2018-09-04 18:85:15</td>
+								<td>目标识别模块</td>
+								<td>192.168.1.1 login</td>
+							</tr>
+						</tbody>
+					</table>
+    			</div>
+    		</div>
+    		
+    	</div>
+    </div>
+    </main>
+{% endblock %}
+
+
+{% block js %}
+
+<script src=" {{ url_for('static', filename='vali-admin/docs/js/main.js') }}"></script>
+
+{% endblock %}
+
+
+

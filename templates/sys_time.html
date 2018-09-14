@@ -1,0 +1,59 @@
+{% extends "layout/base.html" %}
+{% block head %}
+<title> 系统时间 </title>
+<style type="text/css">
+	.a_select{
+		width: 3.5em;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+</style>
+{% endblock %}
+
+{% block main %}
+
+
+    <main class="app-content">
+    	
+	<div class="app-title">
+	    <div>
+	      <h1> 系统时间 </h1>
+	    </div>
+    </div>
+    
+    <div class="tile col-md-10 col-sm-12 col-xs-12" style="margin: 0 auto;">
+    	<div class="tile-body row">
+    		<div class="col-md-12">
+    			<div>
+    				<label class="control-label a_label">当前时间：</label>
+             		<span>2018/09/04 19:22:22</span>
+    			</div>
+              	<div>
+    				<label class="control-label a_label">设置时间：</label>
+             		 <input style="width: 4.5em;" class="form-control a_select" type="text" placeholder="">&nbsp;年&nbsp;<input class="form-control a_select" type="text" placeholder="">&nbsp;月&nbsp;<input class="form-control a_select" type="text" placeholder="">&nbsp;日
+    			</div>
+    			<div>
+    				<label class="control-label a_label">同步时间：</label>
+    				<button class="btn btn-sm btn-info">同步电脑时间</button>
+    			</div>
+    			
+    			<hr />
+    			
+    			<button class="btn btn-sm btn-info">确定</button>
+    			<button class="btn btn-sm">取消</button>
+    		</div>
+    		
+    	</div>
+    </div>
+    </main>
+{% endblock %}
+
+
+{% block js %}
+
+<script src=" {{ url_for('static', filename='vali-admin/docs/js/main.js') }}"></script>
+
+{% endblock %}
+
+
+

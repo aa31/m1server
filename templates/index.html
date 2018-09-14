@@ -1,0 +1,181 @@
+{% extends "layout/base.html" %}
+{% block head %}
+<title> 首页 </title>
+
+
+<style type="text/css">
+	/*.embed-responsive{
+		float: left;
+	}*/
+</style>
+{% endblock %}
+
+{% block main %}
+
+
+    <main class="app-content">
+    	
+	<div class="app-title">
+	    <div class="col-md-6">
+	      <h1> <i class="fa fa-home fa-lg"></i> </h1>
+	       </div>
+	    <div class="col-md-6">
+	    	 <div style="float:right;font-size: 1em;text-align: right;color: red;">试用版本,有效期:2018年9月14日</div> 
+	    </div>
+    </div>
+    
+    <div class="col-md-10" style="margin: 0 auto;">
+    
+    <div class="row">
+    	 <div class="tile col-md-4">
+	    	<h6>系统信息</h5>
+			<label class="control-label a_label">设备名称：</label>
+	     	<span>动态识别追踪设备M1</span>
+	     	<br />
+	     	<label class="control-label a_label">软件版本：</label>
+	     	<span>V1.0</span>	
+	     	<br />
+	     	<label class="control-label a_label">系统时间：</label>
+	     	<span id="systime"></span>	
+	     	<br />
+	     	<label class="control-label a_label">运行时间：</label>
+	     	<span>5天18小时8分钟15秒</span>	
+	    </div>
+	    <div class="col-md-1"></div>
+	    <div class="tile col-md-4">
+	    	<h6>账号信息</h5>
+			<label class="control-label a_label">用户名：</label>
+	     	<span>boerziman</span>
+	     	<br />
+	     	<label class="control-label a_label">密码&#12288;：</label>
+	     	<span>123456</span>	
+	    </div>
+	    
+	    <!--<div class="tile col-md-4">
+	            <div class="embed-responsive embed-responsive-16by9 col-md-3">
+	              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
+	            </div>
+	    </div>-->
+    </div>
+ 	
+ 	<!--<div class="row">
+ 		<div class="col-md-4">
+          <div class="tile">
+            <div class="embed-responsive embed-responsive-16by9">
+              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile">
+            <div class="embed-responsive embed-responsive-16by9">
+              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile">
+            <div class="embed-responsive embed-responsive-16by9">
+              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile">
+            <div class="embed-responsive embed-responsive-16by9">
+              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
+            </div>
+          </div>
+        </div>
+ 	</div>-->
+ 	
+ 	
+    <div class="row">
+    <div class="tile col-md-4">
+    	<h6>网络信息</h5>
+		<label class="control-label a_label">联网方式：</label>
+     	<span>动态ip</span>
+     	<br />
+     	<label class="control-label a_label">ip地址&#12288;：</label>
+     	<span>{{  ip  }}</span>	
+     	<br />
+     	<label class="control-label a_label">端口&#12288;&#12288;：</label>
+     	<span>9909</span>	
+     	<br />
+     	<label class="control-label a_label">子网掩码：</label>
+     	<span>192.168.1.1</span>	
+     	<br />
+     	<label class="control-label a_label">网关&#12288;&#12288;：</label>
+     	<span>255.255.255.0</span>	
+     	<br />
+     	<label class="control-label a_label">主DNS&#12288;：</label>
+     	<span>255.0.0.0</span>	
+     	<br />
+     	<label class="control-label a_label">次DNS&#12288;：</label>
+     	<span></span>	
+    </div>
+    </div>
+    
+    </div>
+    
+    </main>
+{% endblock %}
+
+
+{% block js %}
+
+<script src=" {{ url_for('static', filename='vali-admin/docs/js/main.js') }}"></script>
+<script src=" {{ url_for('static', filename='vali-admin/docs/js/plugins/chart.js') }}"></script>
+
+<script type="text/javascript">
+	function getSystime(){
+		var time,year,month,date,hours,minutes,seconds;
+		time = new Date();
+		year = time.getFullYear();
+		//以下是通过三元运算对日期进行处理,小于10的数在前面加上0
+		month = (time.getMonth()+1)<10?("0"+(time.getMonth()+1)):(time.getMonth()+1);
+		date = time.getDate()<10?("0"+time.getDate()):time.getDate();
+		hours = time.getHours()<10?("0"+time.getHours()):time.getHours();
+		minutes = (time.getMinutes()<10?("0"+time.getMinutes()):time.getMinutes());
+		seconds = (time.getSeconds()<10?("0"+time.getSeconds()):time.getSeconds());
+		//下面操作可以拼成自己想要的日期格式，如：2018-01-15 14:32:57
+		time = year+"-"+month+"-"+date+" "+hours+":"+minutes+":"+seconds;
+		return time;
+	}
+	setInterval(function(){
+		$('#systime').text(getSystime());
+	},1000)
+</script>
+
+<!--<script type="text/javascript">
+	var pdata = [
+      	{
+      		value: 300,
+      		color:"#F7464A",
+      		highlight: "#FF5A5E",
+      		label: "Red"
+      	},
+      	{
+      		value: 50,
+      		color: "#46BFBD",
+      		highlight: "#5AD3D1",
+      		label: "Green"
+      	},
+      	{
+      		value: 100,
+      		color: "#FDB45C",
+      		highlight: "#FFC870",
+      		label: "Yellow"
+      	}
+      ]
+	$().ready(function(){
+      	 var ctxd = $("#doughnutChartDemo").get(0).getContext("2d");
+      	var doughnutChart = new Chart(ctxd).Doughnut(pdata);
+	})
+	
+</script>-->
+
+{% endblock %}
+
+
+

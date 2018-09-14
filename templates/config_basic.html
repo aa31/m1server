@@ -1,0 +1,117 @@
+{% extends "layout/base.html" %}
+{% block head %}
+<title>目标参数</title>
+
+<style>
+	.a_label{
+		padding-right: 1em;
+		color: #777;
+	}
+	.a_select{
+		width: 10em;
+		display: inline-block;
+		margin-left: 1em;
+		margin-bottom: .2em;
+	}
+</style>
+
+{% endblock %}
+
+{% block main %}
+	
+	<main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1>目标参数</h1>
+          <!--<p>Start a beautiful journey here</p>-->
+        </div>
+      </div>
+      
+      <div class="tile col-md-10 col-sm-12 col-xs-12" style="margin: 0 auto;">
+        <div class="tile-body row">
+    				<div class="col-md-8 col-sm-11 col-xs-12">
+    					<div>
+    						<label class="control-label a_label" style="float: left;">实时视频：</label>
+			                <div class="toggle-flip" style="float: left;">
+				                <label>
+				                    <input type="checkbox"><span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+				                </label>
+	    					</div>
+	    					<div class="clearfix"></div>
+    					</div>
+    					<div>
+    						<label class="a_label">实时帧数：</label><span>70fps</span>&nbsp;&nbsp;&nbsp;
+    						<label class="a_label">实时帧数：</label><span>70fps</span>&nbsp;&nbsp;&nbsp;
+    						<label class="a_label">实时帧数：</label><span>70fps</span>&nbsp;&nbsp;&nbsp;
+    						<img style="width: 100%;" src="http://192.168.0.200:5000/video_feed"/>
+    					</div>
+    					
+    					<hr />
+        			</div>
+        			<div class="col-md-4">
+        				<label for="" class="label a_label">识别目标</label>
+        				<div class="animated-checkbox">
+			              <label>
+			                <input type="checkbox"><span class="label-text">四旋翼无人机</span>
+			              </label>
+			            </div>
+			            <div class="animated-checkbox">
+			              <label>
+			                <input type="checkbox"><span class="label-text">固定翼无人机</span>
+			              </label>
+			            </div>
+			            <div class="animated-checkbox">
+			              <label>
+			                <input type="checkbox"><span class="label-text">气球</span>
+			              </label>
+			            </div>
+			            <div class="animated-checkbox">
+			              <label>
+			                <input type="checkbox"><span class="label-text">风筝</span>
+			              </label>
+			            </div>
+			            <div class="animated-checkbox">
+			              <label>
+			                <input type="checkbox"><span class="label-text">人</span>
+			              </label>
+			            </div>
+			            <div class="animated-checkbox">
+			              <label>
+			                <input type="checkbox"><span class="label-text">车</span>
+			              </label>
+			            </div>
+			            
+			            <hr />
+			            
+			            <label for="" class="label a_label">识别参数</label><br />
+			            <span class="label-text" style="margin-right: .8em;">分辨率  ：</span>
+			            <select class="form-control a_select">
+			              <option>自适应</option>
+						  <option>800*600</option>
+						  <option>1024*768</option>
+						  <option>1920*1080</option>
+						</select><br />
+						<span class="label-text">采样方式：</span>
+			            <select class="form-control a_select">
+						  <option>每帧采样</option>
+						  <option>隔帧采样</option>
+						</select><br />
+						
+        			</div>
+      </div>
+      
+    </main>
+{% endblock %}
+
+
+{% block js %}
+
+<script src=" {{ url_for('static', filename='vali-admin/docs/js/popper.min.js') }}"></script>
+<script src=" {{ url_for('static', filename='vali-admin/docs/js/main.js') }}"></script>
+<script src=" {{ url_for('static', filename='vali-admin/docs/js/plugins/pace.min.js') }}"></script>
+<script src=" {{ url_for('static', filename='vali-admin/docs/js/plugins/chart.js') }}"></script>
+
+{% endblock %}
+
+
+

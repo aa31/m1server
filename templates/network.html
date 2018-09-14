@@ -1,0 +1,47 @@
+{% extends "layout/base.html" %}
+{% block head %}
+<title>index page</title>
+{% endblock %}
+
+{% block main %}
+
+
+    <main class="app-content">
+    	
+	<div class="app-title">
+	    <div>
+	      <h1>无线设置</h1>
+	    </div>
+    </div>
+    
+    <div class="tile col-md-10 col-sm-12 col-xs-12" style="margin: 0 auto;">
+    	<div class="tile-body row">
+    		<div class="col-md-12">
+    			<div>
+    				<label class="control-label a_label" style="float: left;">WIFI：</label>
+    			</div>
+    				<br />
+              	<!--<div>
+              		<ul>
+              			<li>1</li>
+              			<li>1</li>
+              			<li>1</li>
+              			<li>1</li>
+              		</ul>
+    			</div>-->
+    		</div>
+    		
+    	</div>
+    </div>
+    </main>
+{% endblock %}
+
+
+{% block js %}
+
+<script src=" {{ url_for('static', filename='vali-admin/docs/js/main.js') }} "></script>
+
+{% endblock %}
+
+
+

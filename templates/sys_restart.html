@@ -1,0 +1,117 @@
+{% extends "layout/base.html" %}
+{% block head %}
+<title> 重启 </title>
+
+<style type="text/css">
+	.a_tips{
+		padding: 0 1em;
+		color: #2c2c2c;
+	}
+</style>
+
+{% endblock %}
+
+{% block main %}
+
+
+    <main class="app-content">
+    	
+	<div class="app-title">
+	    <div>
+	      <h1> 重启 </h1>
+	    </div>
+    </div>
+    
+    <div class="tile col-md-10 col-sm-12 col-xs-12" style="margin: 0 auto;">
+    	<div class="tile-body row">
+    		<div class="col-md-12">
+    			<div>
+    				<label class="control-label a_label">重启系统：</label>
+    				<a href="#" class="btn btn-info btn-sm">重启系统</a>
+					<span class="a_tips">重启设备将断开当前所有连接，过程约1分钟</span>
+    			</div>
+    			
+    			<hr />
+    			
+    			<div>
+    				<label class="control-label a_label">定时重启：</label>
+    				<div class="form-check" style="display: inline-block;">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="gender">开启
+                      </label>
+                      <label class="form-check-label" style="margin-left: 6em;">
+                        <input class="form-check-input" type="radio" name="gender">关闭
+                      </label>
+                    </div>
+                    <br /><br />
+                    <label class="control-label a_label">重启时间：</label>
+    				<select class="form-control a_select">
+					  <option>1</option>
+					</select>
+					时
+					<select class="form-control a_select">
+					  <option>1</option>
+					</select>
+					分
+					<br /><br />
+					<label class="control-label a_label">&#12288;&#12288;重复：</label>
+    				<div class="form-check" style="display: inline-block;">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="gender">每天
+                      </label>
+                      <label class="form-check-label" style="margin-left: 6em;">
+                        <input class="form-check-input" type="radio" name="gender">指定日
+                      </label>
+                    </div>
+                    
+                    <br />
+                    
+                    <label class="control-label a_label">&#12288;&#12288;&#12288;&#12288;</label>
+                    <div style="display: inline-block;">
+                    	<div class="animated-checkbox">
+			              <label>
+			                <input type="checkbox"><span class="label-text">星期一</span></label>&#12288;
+			                <label>
+			                <input type="checkbox"><span class="label-text">星期二</span>
+			              </label>&#12288;
+			              <label>
+			                <input type="checkbox"><span class="label-text">星期三</span>
+			              </label>&#12288;
+			              <label>
+			                <input type="checkbox"><span class="label-text">星期四</span>
+			              </label>&#12288;
+			              <label>
+			                <input type="checkbox"><span class="label-text">星期五</span>
+			              </label>&#12288;
+			              <label>
+			                <input type="checkbox"><span class="label-text">星期六</span>
+			              </label>&#12288;
+			              <label>
+			                <input type="checkbox"><span class="label-text">星期日</span>
+			              </label>
+			            </div>
+                    </div>
+    			</div>
+    			
+    			<hr />
+    			<button class="btn btn-sm btn-info">确定</button>
+    			<button class="btn btn-sm">取消</button>
+    		</div>
+    		
+    			
+    		
+    		
+    	</div>
+    </div>
+    </main>
+{% endblock %}
+
+
+{% block js %}
+
+<script src=" {{ url_for('static', filename='vali-admin/docs/js/main.js') }}"></script>
+
+{% endblock %}
+
+
+
