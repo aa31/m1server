@@ -29,7 +29,6 @@ def get_netcard():
 
 @app.route('/')
 def index():
-    netaddrs = get_netcard()
     return render_template('index.html', ip='127.0.0.1')
 
 
