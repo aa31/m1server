@@ -78,4 +78,4 @@ def network():
 
 
 if __name__ == '__main__':
-    app.run(port=9909)
+    app.run(port=9909, debug=True)

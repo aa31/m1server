@@ -7,6 +7,34 @@
 	/*.embed-responsive{
 		float: left;
 	}*/
+	
+	.a_titl{
+		position: relative;
+		background-color: #fff !important;
+		border-radius: 3px;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+		margin-bottom: 30px;
+	}
+	.a_titl_head{
+		background-color: #17a2b8;
+		color: #fff;
+		padding-left:1em ;
+		padding-right: 1em;
+		line-height: 2.5em;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+	}
+	.a_titl_body{
+		padding: 1em;
+		font-size: 1.1em;
+	}
+	.a_charts_text{
+		position: absolute;top: 50%;left: 50%;
+		transform: translate(-50%,-50%);
+			         
+	}
+			         
+	
 </style>
 {% endblock %}
 
@@ -24,99 +52,105 @@
 	    </div>
     </div>
     
+    
     <div class="col-md-10" style="margin: 0 auto;">
+    	<div class="row">
+    		<div class="col-md-4">
+	    		<div class="a_titl">
+					<div class="a_titl_head">CPU</div>
+					<div class="a_titl_body">
+						<div class="embed-responsive embed-responsive-16by9">
+			              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
+			              <div class="a_charts_text">12%</div>
+			            </div>
+					</div>
+				</div>
+	    	</div>
+	    	<div class="col-md-4">
+	    		<div class="a_titl">
+					<div class="a_titl_head">内存</div>
+					<div class="a_titl_body">
+						<div class="embed-responsive embed-responsive-16by9">
+			              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
+			            </div>
+					</div>
+				</div>
+	    	</div>
+	    	<div class="col-md-4">
+	    		<div class="a_titl">
+					<div class="a_titl_head">磁盘</div>
+					<div class="a_titl_body">
+						<div class="embed-responsive embed-responsive-16by9">
+			              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
+			            </div>
+					</div>
+				</div>
+	    	</div>
+    	
+    	<div class="col-md-6">
+			<div class="a_titl">
+    			<div class="a_titl_head">系统信息</div>
+    			<div class="a_titl_body">
+    				<label class="control-label a_label">设备名称：</label>
+			     	<span>动态识别追踪设备M1</span>
+			     	<br />
+			     	<label class="control-label a_label">软件版本：</label>
+			     	<span>V1.0</span>	
+			     	<br />
+			     	<label class="control-label a_label">系统时间：</label>
+			     	<span id="systime"></span>	
+			     	<br />
+			     	<label class="control-label a_label">运行时间：</label>
+			     	<span>5天18小时8分钟15秒</span>	
+    			</div>
+    		</div>
+		</div>
+    	
+    	<div class="col-md-6">
+			<div class="a_titl">
+    			<div class="a_titl_head">网络信息</div>
+    			<div class="a_titl_body">
+    				<label class="control-label a_label">联网方式：</label>
+			     	<span>动态ip</span>
+			     	<br />
+			     	<label class="control-label a_label">ip地址&#12288;：</label>
+			     	<span>{{  ip  }}</span>	
+			     	<br />
+			     	<label class="control-label a_label">端口&#12288;&#12288;：</label>
+			     	<span>9909</span>	
+			     	<br />
+			     	<label class="control-label a_label">子网掩码：</label>
+			     	<span>192.168.1.1</span>	
+			     	<br />
+			     	<label class="control-label a_label">网关&#12288;&#12288;：</label>
+			     	<span>255.255.255.0</span>	
+			     	<br />
+			     	<label class="control-label a_label">主DNS&#12288;：</label>
+			     	<span>255.0.0.0</span>	
+			     	<br />
+			     	<label class="control-label a_label">次DNS&#12288;：</label>
+    			</div>
+    		</div>
+		</div>
+    		
+    	<div class="col-md-6">
+			<div class="a_titl">
+    			<div class="a_titl_head">账号信息</div>
+    			<div class="a_titl_body">
+    				<label class="control-label a_label">用户名：</label>
+			     	<span>boerziman</span>
+			     	<br />
+			     	<label class="control-label a_label">密码&#12288;：</label>
+			     	<span>123456</span>	
+    			</div>
+    		</div>
+		</div>
+    	
+    </div>
     
-    <div class="row">
-    	 <div class="tile col-md-4">
-	    	<h6>系统信息</h5>
-			<label class="control-label a_label">设备名称：</label>
-	     	<span>动态识别追踪设备M1</span>
-	     	<br />
-	     	<label class="control-label a_label">软件版本：</label>
-	     	<span>V1.0</span>	
-	     	<br />
-	     	<label class="control-label a_label">系统时间：</label>
-	     	<span id="systime"></span>	
-	     	<br />
-	     	<label class="control-label a_label">运行时间：</label>
-	     	<span>5天18小时8分钟15秒</span>	
-	    </div>
-	    <div class="col-md-1"></div>
-	    <div class="tile col-md-4">
-	    	<h6>账号信息</h5>
-			<label class="control-label a_label">用户名：</label>
-	     	<span>boerziman</span>
-	     	<br />
-	     	<label class="control-label a_label">密码&#12288;：</label>
-	     	<span>123456</span>	
-	    </div>
-	    
-	    <!--<div class="tile col-md-4">
-	            <div class="embed-responsive embed-responsive-16by9 col-md-3">
-	              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
-	            </div>
-	    </div>-->
-    </div>
- 	
- 	<!--<div class="row">
- 		<div class="col-md-4">
-          <div class="tile">
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="tile">
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="tile">
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="tile">
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
- 	</div>-->
- 	
- 	
-    <div class="row">
-    <div class="tile col-md-4">
-    	<h6>网络信息</h5>
-		<label class="control-label a_label">联网方式：</label>
-     	<span>动态ip</span>
-     	<br />
-     	<label class="control-label a_label">ip地址&#12288;：</label>
-     	<span>{{  ip  }}</span>	
-     	<br />
-     	<label class="control-label a_label">端口&#12288;&#12288;：</label>
-     	<span>9909</span>	
-     	<br />
-     	<label class="control-label a_label">子网掩码：</label>
-     	<span>192.168.1.1</span>	
-     	<br />
-     	<label class="control-label a_label">网关&#12288;&#12288;：</label>
-     	<span>255.255.255.0</span>	
-     	<br />
-     	<label class="control-label a_label">主DNS&#12288;：</label>
-     	<span>255.0.0.0</span>	
-     	<br />
-     	<label class="control-label a_label">次DNS&#12288;：</label>
-     	<span></span>	
-    </div>
-    </div>
-    
-    </div>
+    	
+    	</div>  <!--12-->
+    </div>  <!--row-->
     
     </main>
 {% endblock %}
@@ -147,25 +181,19 @@
 	},1000)
 </script>
 
-<!--<script type="text/javascript">
+<script type="text/javascript">
 	var pdata = [
       	{
-      		value: 300,
+      		value: 10,
       		color:"#F7464A",
       		highlight: "#FF5A5E",
-      		label: "Red"
+      		label: "已使用"
       	},
       	{
       		value: 50,
-      		color: "#46BFBD",
-      		highlight: "#5AD3D1",
-      		label: "Green"
-      	},
-      	{
-      		value: 100,
-      		color: "#FDB45C",
-      		highlight: "#FFC870",
-      		label: "Yellow"
+      		color: "#eee",
+      		highlight: "#eee",
+      		label: "未使用"
       	}
       ]
 	$().ready(function(){
@@ -173,7 +201,7 @@
       	var doughnutChart = new Chart(ctxd).Doughnut(pdata);
 	})
 	
-</script>-->
+</script>
 
 {% endblock %}
 
