@@ -2,34 +2,15 @@
 from flask import Flask, render_template
 import psutil
 import socket,time, datetime
+import func
+
 app = Flask(__name__)
-
-
-# 返回ip
-def get_host_ip():
-    try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.connect(('8.8.8.8', 80))
-        ip = s.getsockname()[0]
-    finally:
-        s.close()
-    return ip
-
-
-# 获取网卡名称和其ip地址，不包括回环
-def get_netcard():
-    netcard_info = []
-    info = psutil.net_if_addrs()
-    for k,v in info.items():
-        for item in v:
-            if item[0] == 2 and not item[1]=='127.0.0.1':
-                netcard_info.append((k,item[1]))
-    return netcard_info
 
 
 @app.route('/')
 def index():
-    return render_template('index.html', ip='127.0.0.1')
+    params = {'cpu':func.getCpuState(),'mem':func.getMemState(),'disk':func.getDiskState(), 'ip':func.get_ip(), 'netmask':func.get_netmask()}
+    return render_template('index.html', params=params)
 
 
 @app.route('/login')

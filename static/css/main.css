@@ -13554,7 +13554,7 @@ be a descendant of the grid when it is being dragged.
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #000;
+  background-color: #2c2c2c;
   z-index: 1030;
   padding-right: 15px;
 }
@@ -13788,7 +13788,7 @@ be a descendant of the grid when it is being dragged.
   width: 230px;
   overflow: auto;
   z-index: 10;
-  background-color: #222d32;
+  background-color: #242424;
   -webkit-box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
   -webkit-transition: left 0.3s ease, width 0.3s ease;
@@ -13877,8 +13877,8 @@ be a descendant of the grid when it is being dragged.
 }
 
 .app-menu__item.active, .app-menu__item:hover, .app-menu__item:focus {
-  background: #0d1214;
-  border-left-color: #17a2b8;
+  background: #2c3138;
+  border-left-color: #24D197;
   text-decoration: none;
   color: #fff;
 }
@@ -13898,8 +13898,8 @@ be a descendant of the grid when it is being dragged.
 }
 
 .treeview.is-expanded [data-toggle='treeview'] {
-  border-left-color: #17a2b8;
-  background: #0d1214;
+  border-left-color: #24D197;
+  background: #2c313;
 }
 
 .treeview.is-expanded .treeview-menu {
@@ -13918,7 +13918,7 @@ be a descendant of the grid when it is being dragged.
   -webkit-transition: max-height 0.3s ease;
   -o-transition: max-height 0.3s ease;
   transition: max-height 0.3s ease;
-  background: #2a383e;
+  background: #fff;
 }
 
 .treeview-item {
@@ -13930,11 +13930,13 @@ be a descendant of the grid when it is being dragged.
           align-items: center;
   padding: 12px 12px 12px 40px;
   font-size: 1em;
-  color: #fff;
+  color: #2c3138;
+  background-color: #242424;
+  color: #fff
 }
 
 .treeview-item.active, .treeview-item:hover, .treeview-item:focus {
-  background: #0d1214;
+  background: #2c3138;
   text-decoration: none;
   color: #fff;
 }
@@ -15232,11 +15234,4 @@ be a descendant of the grid when it is being dragged.
 
 
 
-.a_label{
-	padding-right: 1em;
-	color: #777;
-}
-.a_select{
-	width: auto;
-	display: inline-block;
-}
+
