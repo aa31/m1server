@@ -7,7 +7,7 @@
 	/*.embed-responsive{
 		float: left;
 	}*/
-	
+
 	.a_titl{
 		position: relative;
 		background-color: #fff !important;
@@ -31,130 +31,130 @@
 	.a_charts_text{
 		position: absolute;top: 50%;left: 50%;
 		transform: translate(-50%,-50%);
-			         
+
 	}
-			         
-	
+
+
 </style>
 {% endblock %}
 
 {% block main %}
 
 
-    <main class="app-content">
-    	
+<main class="app-content">
+
 	<div class="app-title">
-	    <div class="col-md-6">
-	      <h1> <i class="fa fa-home fa-lg"></i> </h1>
-	       </div>
-	    <div class="col-md-6">
-	    	 <div style="float:right;font-size: 1em;text-align: right;color: red;">试用版本,有效期:2018年9月14日</div> 
-	    </div>
-    </div>
-    
-    
-    <div class="col-md-10" style="margin: 0 auto;">
-    	<div class="row">
-    		<div class="col-md-4">
-	    		<div class="a_titl">
+		<div class="col-md-6">
+			<h1> <i class="fa fa-home fa-lg"></i> </h1>
+		</div>
+		<div class="col-md-6">
+			<div style="float:right;font-size: 1em;text-align: right;color: red;">试用版本,有效期:2018年9月14日</div>
+		</div>
+	</div>
+
+
+	<div class="col-md-10" style="margin: 0 auto;">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="a_titl">
 					<div class="a_titl_head">CPU</div>
 					<div class="a_titl_body">
 						<div class="embed-responsive embed-responsive-16by9">
-			              <canvas class="embed-responsive-item" id="c_cpu"></canvas>
-			              <div class="a_charts_text">{{  params.cpu  }}%</div>
-			            </div>
+							<canvas class="embed-responsive-item" id="c_cpu"></canvas>
+							<div class="a_charts_text">{{  params.cpu  }}%</div>
+						</div>
 					</div>
 				</div>
-	    	</div>
-	    	<div class="col-md-4">
-	    		<div class="a_titl">
+			</div>
+			<div class="col-md-4">
+				<div class="a_titl">
 					<div class="a_titl_head">内存</div>
 					<div class="a_titl_body">
 						<div class="embed-responsive embed-responsive-16by9">
-			              <canvas class="embed-responsive-item" id="c_mem"></canvas>
+							<canvas class="embed-responsive-item" id="c_mem"></canvas>
 							<div class="a_charts_text">{{  params.mem  }}%</div>
-			            </div>
+						</div>
 					</div>
 				</div>
-	    	</div>
-	    	<div class="col-md-4">
-	    		<div class="a_titl">
+			</div>
+			<div class="col-md-4">
+				<div class="a_titl">
 					<div class="a_titl_head">磁盘</div>
 					<div class="a_titl_body">
 						<div class="embed-responsive embed-responsive-16by9">
-			              <canvas class="embed-responsive-item" id="c_disk"></canvas>
+							<canvas class="embed-responsive-item" id="c_disk"></canvas>
 							<div class="a_charts_text">{{  params.disk  }}%</div>
-			            </div>
+						</div>
 					</div>
 				</div>
-	    	</div>
-    	
-    	<div class="col-md-6">
-			<div class="a_titl">
-    			<div class="a_titl_head">系统信息</div>
-    			<div class="a_titl_body">
-    				<label class="control-label a_label">设备名称：</label>
-			     	<span>动态识别追踪设备M1</span>
-			     	<br />
-			     	<label class="control-label a_label">软件版本：</label>
-			     	<span>V1.0</span>	
-			     	<br />
-			     	<label class="control-label a_label">系统时间：</label>
-			     	<span id="systime"></span>	
-			     	<br />
-			     	<label class="control-label a_label">运行时间：</label>
-			     	<span>5天18小时8分钟15秒</span>	
-    			</div>
-    		</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="a_titl">
+					<div class="a_titl_head">系统信息</div>
+					<div class="a_titl_body">
+						<label class="control-label a_label">设备名称：</label>
+						<span>动态识别追踪设备M1</span>
+						<br />
+						<label class="control-label a_label">软件版本：</label>
+						<span>V1.0</span>
+						<br />
+						<label class="control-label a_label">系统时间：</label>
+						<span id="systime"></span>
+						<br />
+						<label class="control-label a_label">运行时间：</label>
+						<span>{{  params.sysruntime  }}</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="a_titl">
+					<div class="a_titl_head">网络信息</div>
+					<div class="a_titl_body">
+						<label class="control-label a_label">联网方式：</label>
+						<span>动态ip</span>
+						<br />
+						<label class="control-label a_label">ip地址&#12288;：</label>
+						<span>{{  params.ip  }}</span>
+						<br />
+						<label class="control-label a_label">端口&#12288;&#12288;：</label>
+						<span>9909</span>
+						<br />
+						<label class="control-label a_label">子网掩码：</label>
+						<span>192.168.1.1</span>
+						<br />
+						<label class="control-label a_label">网关&#12288;&#12288;：</label>
+						<span>{{  params.netmask  }}</span>
+						<br />
+						<label class="control-label a_label">主DNS&#12288;：</label>
+						<span>255.0.0.0</span>
+						<br />
+						<label class="control-label a_label">次DNS&#12288;：</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="a_titl">
+					<div class="a_titl_head">账号信息</div>
+					<div class="a_titl_body">
+						<label class="control-label a_label">用户名：</label>
+						<span>boerziman</span>
+						<br />
+						<label class="control-label a_label">密码&#12288;：</label>
+						<span>123456</span>
+					</div>
+				</div>
+			</div>
+
 		</div>
-    	
-    	<div class="col-md-6">
-			<div class="a_titl">
-    			<div class="a_titl_head">网络信息</div>
-    			<div class="a_titl_body">
-    				<label class="control-label a_label">联网方式：</label>
-			     	<span>动态ip</span>
-			     	<br />
-			     	<label class="control-label a_label">ip地址&#12288;：</label>
-			     	<span>{{  params.ip  }}</span>	
-			     	<br />
-			     	<label class="control-label a_label">端口&#12288;&#12288;：</label>
-			     	<span>9909</span>	
-			     	<br />
-			     	<label class="control-label a_label">子网掩码：</label>
-			     	<span>192.168.1.1</span>	
-			     	<br />
-			     	<label class="control-label a_label">网关&#12288;&#12288;：</label>
-			     	<span>{{  params.netmask  }}</span>	
-			     	<br />
-			     	<label class="control-label a_label">主DNS&#12288;：</label>
-			     	<span>255.0.0.0</span>	
-			     	<br />
-			     	<label class="control-label a_label">次DNS&#12288;：</label>
-    			</div>
-    		</div>
-		</div>
-    		
-    	<div class="col-md-6">
-			<div class="a_titl">
-    			<div class="a_titl_head">账号信息</div>
-    			<div class="a_titl_body">
-    				<label class="control-label a_label">用户名：</label>
-			     	<span>boerziman</span>
-			     	<br />
-			     	<label class="control-label a_label">密码&#12288;：</label>
-			     	<span>123456</span>	
-    			</div>
-    		</div>
-		</div>
-    	
-    </div>
-    
-    	
-    	</div>  <!--12-->
-    </div>  <!--row-->
-    
-    </main>
+
+
+	</div>  <!--12-->
+	</div>  <!--row-->
+
+</main>
 {% endblock %}
 
 
@@ -164,85 +164,85 @@
 <script src=" {{ url_for('static', filename='vali-admin/docs/js/plugins/chart.js') }}"></script>
 
 <script type="text/javascript">
-	function getSystime(){
-		var time,year,month,date,hours,minutes,seconds;
-		time = new Date();
-		year = time.getFullYear();
-		//以下是通过三元运算对日期进行处理,小于10的数在前面加上0
-		month = (time.getMonth()+1)<10?("0"+(time.getMonth()+1)):(time.getMonth()+1);
-		date = time.getDate()<10?("0"+time.getDate()):time.getDate();
-		hours = time.getHours()<10?("0"+time.getHours()):time.getHours();
-		minutes = (time.getMinutes()<10?("0"+time.getMinutes()):time.getMinutes());
-		seconds = (time.getSeconds()<10?("0"+time.getSeconds()):time.getSeconds());
-		//下面操作可以拼成自己想要的日期格式，如：2018-01-15 14:32:57
-		time = year+"-"+month+"-"+date+" "+hours+":"+minutes+":"+seconds;
-		return time;
-	}
-	setInterval(function(){
-		$('#systime').text(getSystime());
-	},1000)
+    function getSystime(){
+        var time,year,month,date,hours,minutes,seconds;
+        time = new Date();
+        year = time.getFullYear();
+        //以下是通过三元运算对日期进行处理,小于10的数在前面加上0
+        month = (time.getMonth()+1)<10?("0"+(time.getMonth()+1)):(time.getMonth()+1);
+        date = time.getDate()<10?("0"+time.getDate()):time.getDate();
+        hours = time.getHours()<10?("0"+time.getHours()):time.getHours();
+        minutes = (time.getMinutes()<10?("0"+time.getMinutes()):time.getMinutes());
+        seconds = (time.getSeconds()<10?("0"+time.getSeconds()):time.getSeconds());
+        //下面操作可以拼成自己想要的日期格式，如：2018-01-15 14:32:57
+        time = year+"-"+month+"-"+date+" "+hours+":"+minutes+":"+seconds;
+        return time;
+    }
+    setInterval(function(){
+        $('#systime').text(getSystime());
+    },1000)
 </script>
 
 <script type="text/javascript">
-	var cpu_p = {{  params.cpu  }};
-	var p_cpu = [
-      	{
-      		value: cpu_p,
-      		color:"#24D197",
-      		highlight: "#FF5A5E",
-      		label: "已使用"
-      	},
-      	{
-      		value: 100-cpu_p,
-      		color: "#eee",
-      		highlight: "#eee",
-      		label: "未使用"
-      	}
-      ];
-	var mem = {{  params.mem  }};
-	var p_mem = [
-      	{
-      		value: mem,
-      		color:"#24D197",
-      		highlight: "#FF5A5E",
-      		label: "已使用"
-      	},
-      	{
-      		value: 100-mem,
-      		color: "#eee",
-      		highlight: "#eee",
-      		label: "未使用"
-      	}
-      ];
-var disk = {{  params.disk  }};
-	var p_disk = [
-      	{
-      		value: disk,
-      		color:"#24D197",
-      		highlight: "#FF5A5E",
-      		label: "已使用"
-      	},
-      	{
-      		value: 100-disk,
-      		color: "#eee",
-      		highlight: "#eee",
-      		label: "未使用"
-      	}
-      ];
-	$().ready(function(){
-      	 var ctxd1 = $("#c_cpu").get(0).getContext("2d");
-      	var c_cpu = new Chart(ctxd1).Doughnut(p_cpu);
+    var cpu_p = {{  params.cpu  }};
+    var p_cpu = [
+        {
+            value: cpu_p,
+            color:"#24D197",
+            highlight: "#FF5A5E",
+            label: "已使用"
+        },
+        {
+            value: 100-cpu_p,
+            color: "#eee",
+            highlight: "#eee",
+            label: "未使用"
+        }
+    ];
+    var mem = {{  params.mem  }};
+    var p_mem = [
+        {
+            value: mem,
+            color:"#24D197",
+            highlight: "#FF5A5E",
+            label: "已使用"
+        },
+        {
+            value: 100-mem,
+            color: "#eee",
+            highlight: "#eee",
+            label: "未使用"
+        }
+    ];
+    var disk = {{  params.disk  }};
+    var p_disk = [
+        {
+            value: disk,
+            color:"#24D197",
+            highlight: "#FF5A5E",
+            label: "已使用"
+        },
+        {
+            value: 100-disk,
+            color: "#eee",
+            highlight: "#eee",
+            label: "未使用"
+        }
+    ];
+    $().ready(function(){
+        var ctxd1 = $("#c_cpu").get(0).getContext("2d");
+        var c_cpu = new Chart(ctxd1).Doughnut(p_cpu);
 
-      	 var ctxd2 = $("#c_mem").get(0).getContext("2d");
-      	var c_mem = new Chart(ctxd2).Doughnut(p_mem);
+        var ctxd2 = $("#c_mem").get(0).getContext("2d");
+        var c_mem = new Chart(ctxd2).Doughnut(p_mem);
 
-      	 var ctxd3 = $("#c_disk").get(0).getContext("2d");
-      	var c_disk = new Chart(ctxd3).Doughnut(p_disk);
+        var ctxd3 = $("#c_disk").get(0).getContext("2d");
+        var c_disk = new Chart(ctxd3).Doughnut(p_disk);
 
 
 
-	})
-	
+    })
+
 </script>
 
 {% endblock %}

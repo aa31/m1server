@@ -1,13 +1,9 @@
 import psutil
 import time
-
+import math
 
 def get_net_addrs():
     return psutil.net_if_addrs()
-
-
-addrs = get_net_addrs()
-# print(addrs)
 
 
 # cpu占用率
@@ -42,19 +38,51 @@ def get_systimes():
 # util.net_if_stats()))
 
 
-if_addrs = psutil.net_if_addrs()
+
+# 获取ip和网关
+def get_ipnetmask():
+    if_addrs = psutil.net_if_addrs()
+    # if_list = if_addrs['本地连接']
+    if_list = if_addrs['eth0']
+    for i in range(len(if_list)):
+        if 'AddressFamily.AF_INET: 2' in str(if_list[i]):
+            return if_list[i]
 
 
 # 获取ip
 def get_ip():
-    return if_addrs['eth0'][1][1]
+    return get_ipnetmask().address
+
 
 # 本地连接
 # 获取网关
 def get_netmask():
-    return if_addrs['eth0'][1][2]
+    return get_ipnetmask().netmask
 
 
-# 开机时间
-print(psutil.boot_time())
+def changeTime(allTime):
+    day = 24*60*60
+    hour = 60*60
+    min = 60
+    if allTime <60:
+        return  "%d 秒"%math.ceil(allTime)
+    elif  allTime > day:
+        days = divmod(allTime,day)
+        return "%d 天 %s"%(int(days[0]),changeTime(days[1]))
+    elif allTime > hour:
+        hours = divmod(allTime,hour)
+        return '%d 小时 %s'%(int(hours[0]),changeTime(hours[1]))
+    else:
+        mins = divmod(allTime,min)
+        return "%d 分钟 %d 秒"%(int(mins[0]),math.ceil(mins[1]))
+
+
+# 系统运行时间
+def get_stsruntime():
+    return changeTime(time.time()-psutil.boot_time())
+
+
+print(get_stsruntime())
+
+
 

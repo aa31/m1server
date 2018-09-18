@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    params = {'cpu':func.getCpuState(),'mem':func.getMemState(),'disk':func.getDiskState(), 'ip':func.get_ip(), 'netmask':func.get_netmask()}
+    params = {'cpu':func.getCpuState(),'mem':func.getMemState(),'disk':func.getDiskState(), 'ip':func.get_ip(), 'netmask':func.get_netmask(),'sysruntime':func.get_stsruntime()}
     return render_template('index.html', params=params)
 
 
