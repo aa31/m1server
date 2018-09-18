@@ -1,7 +1,7 @@
 {% extends "layout/base.html" %}
 {% block head %}
-<title> 首页 </title>
 
+{% block title %}{% endblock %} 
 
 <style type="text/css">
 	/*.embed-responsive{
@@ -89,7 +89,7 @@
 				</div>
 			</div>
 
-			<div class="col-md-6">
+			<div class="col-md-6 col-sm-6 col-lg-4">
 				<div class="a_titl">
 					<div class="a_titl_head">系统信息</div>
 					<div class="a_titl_body">
@@ -103,12 +103,18 @@
 						<span id="systime"></span>
 						<br />
 						<label class="control-label a_label">运行时间：</label>
-						<span>{{  params.sysruntime  }}</span>
+						<span id="sysruntime"></span>
+						&#12288;&#12288;<br />
+						&#12288;&#12288;<br />
+						&#12288;&#12288;<br />
+						&#12288;&#12288;<br />
+						&#12288;&#12288;<br />
+						
 					</div>
 				</div>
 			</div>
 
-			<div class="col-md-6">
+			<div class="col-md-6 col-sm-6 col-lg-4">
 				<div class="a_titl">
 					<div class="a_titl_head">网络信息</div>
 					<div class="a_titl_body">
@@ -135,7 +141,7 @@
 				</div>
 			</div>
 
-			<div class="col-md-6">
+			<div class="col-md-6 col-sm-6 col-lg-4">
 				<div class="a_titl">
 					<div class="a_titl_head">账号信息</div>
 					<div class="a_titl_body">
@@ -178,9 +184,44 @@
         time = year+"-"+month+"-"+date+" "+hours+":"+minutes+":"+seconds;
         return time;
     }
+    // 当前系统时间
     setInterval(function(){
         $('#systime').text(getSystime());
-    },1000)
+    },1000);
+
+    function SecondToDate(msd) {
+        var time =msd
+        if (null != time && "" != time) {
+            if (time > 60 && time < 60 * 60) {
+                time = parseInt(time / 60.0) + "分钟" + parseInt((parseFloat(time / 60.0) -
+                    parseInt(time / 60.0)) * 60) + "秒";
+            }
+            else if (time >= 60 * 60 && time < 60 * 60 * 24) {
+                time = parseInt(time / 3600.0) + "小时" + parseInt((parseFloat(time / 3600.0) -
+                    parseInt(time / 3600.0)) * 60) + "分钟" +
+                    parseInt((parseFloat((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60) -
+                    parseInt((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60)) * 60) + "秒";
+            } else if (time >= 60 * 60 * 24) {
+                time = parseInt(time / 3600.0/24) + "天" +parseInt((parseFloat(time / 3600.0/24)-
+                    parseInt(time / 3600.0/24))*24) + "小时" + parseInt((parseFloat(time / 3600.0) -
+                    parseInt(time / 3600.0)) * 60) + "分钟" +
+                    parseInt((parseFloat((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60) -
+                    parseInt((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60)) * 60) + "秒";
+            }
+            else {
+                time = parseInt(time) + "秒";
+            }
+        }
+        return time;
+    }
+    var sysruntime = '{{  params.sysruntime  }}';
+    
+    console.log(sysruntime)
+	setInterval(function(){
+		sysruntime++;
+        $('#sysruntime').text(SecondToDate(sysruntime));
+    },1000);
+
 </script>
 
 <script type="text/javascript">
@@ -188,7 +229,7 @@
     var p_cpu = [
         {
             value: cpu_p,
-            color:"#24D197",
+            color:"#17A2B8",
             highlight: "#FF5A5E",
             label: "已使用"
         },
@@ -203,7 +244,7 @@
     var p_mem = [
         {
             value: mem,
-            color:"#24D197",
+            color:"#17A2B8",
             highlight: "#FF5A5E",
             label: "已使用"
         },
@@ -218,7 +259,7 @@
     var p_disk = [
         {
             value: disk,
-            color:"#24D197",
+            color:"#17A2B8",
             highlight: "#FF5A5E",
             label: "已使用"
         },

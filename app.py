@@ -1,10 +1,11 @@
 # coding=utf-8
 from flask import Flask, render_template
-import psutil
-import socket,time, datetime
 import func
+import config
+
 
 app = Flask(__name__)
+app.config.from_object(config)
 
 
 @app.route('/')
@@ -59,4 +60,6 @@ def network():
 
 
 if __name__ == '__main__':
-    app.run(port=9909, debug=True)
+    app.run(host='0.0.0.0', port=app.config['PORT'])
+
+

@@ -42,8 +42,8 @@ def get_systimes():
 # 获取ip和网关
 def get_ipnetmask():
     if_addrs = psutil.net_if_addrs()
-    # if_list = if_addrs['本地连接']
-    if_list = if_addrs['eth0']
+    if_list = if_addrs['本地连接']
+    # if_list = if_addrs['eth0']
     for i in range(len(if_list)):
         if 'AddressFamily.AF_INET: 2' in str(if_list[i]):
             return if_list[i]
@@ -77,12 +77,10 @@ def changeTime(allTime):
         return "%d 分钟 %d 秒"%(int(mins[0]),math.ceil(mins[1]))
 
 
-# 系统运行时间
+# 系统运行时间  时间戳
 def get_stsruntime():
-    return changeTime(time.time()-psutil.boot_time())
+    return time.time()-psutil.boot_time()
 
-
-print(get_stsruntime())
 
 
 
