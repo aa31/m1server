@@ -13466,12 +13466,12 @@ be a descendant of the grid when it is being dragged.
 
 ::-moz-selection {
   color: #FFF;
-  background-color: #00635a;
+  background-color: #17a2b8;
 }
 
 ::selection {
   color: #FFF;
-  background-color: #00635a;
+  background-color: #17a2b8;
 }
 
 @media (min-width: 768px) {
@@ -13638,7 +13638,7 @@ be a descendant of the grid when it is being dragged.
 
 .app-sidebar__toggle:focus, .app-sidebar__toggle:hover {
   color: #fff;
-  background-color: #00635a;
+  background-color: #17a2b8;
   text-decoration: none;
 }
 

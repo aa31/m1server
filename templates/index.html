@@ -280,7 +280,9 @@
         var ctxd3 = $("#c_disk").get(0).getContext("2d");
         var c_disk = new Chart(ctxd3).Doughnut(p_disk);
 
-
+		$.post('/get_sysstatus',function(res){
+			console.log(res);
+		})
 
     })
 
