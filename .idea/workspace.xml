@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d8d10ec-6691-4a58-933f-db0655cd0586" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/change.py" beforeDir="false" afterPath="$PROJECT_DIR$/change.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/func.py" beforeDir="false" afterPath="$PROJECT_DIR$/func.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/config_basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/config_basic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/config_network.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/config_network.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/network.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/network.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sys_cpwd.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sys_cpwd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sys_log.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sys_log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sys_restart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sys_restart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sys_time.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sys_time.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sys_upd.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sys_upd.html" afterDir="false" />
-    </list>
+    <list default="true" id="9d8d10ec-6691-4a58-933f-db0655cd0586" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="387">
+              <caret line="61" column="26" lean-forward="true" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
               <folding>
                 <element signature="e#15#55#0" expanded="true" />
                 <marker date="1537253917193" expanded="true" signature="138:139" ph="..." />
@@ -106,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/func.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-328">
+            <state relative-caret-position="-240">
               <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -212,7 +197,8 @@
             <path>
               <item name="m1server" type="b2602c69:ProjectViewProjectNode" />
               <item name="m1server" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -284,7 +270,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="958" y="216" width="1532" height="950" extended-state="0" />
+    <frame x="533" y="82" width="1532" height="950" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20684932" />
@@ -433,7 +419,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/func.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-328">
+        <state relative-caret-position="-240">
           <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -461,8 +447,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="387">
+          <caret line="61" column="26" lean-forward="true" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
           <folding>
             <element signature="e#15#55#0" expanded="true" />
             <marker date="1537253917193" expanded="true" signature="138:139" ph="..." />
