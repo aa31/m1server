@@ -216,7 +216,6 @@
     }
     var sysruntime = '{{  params.sysruntime  }}';
     
-    console.log(sysruntime)
 	setInterval(function(){
 		sysruntime++;
         $('#sysruntime').text(SecondToDate(sysruntime));
@@ -225,64 +224,73 @@
 </script>
 
 <script type="text/javascript">
-    var cpu_p = {{  params.cpu  }};
-    var p_cpu = [
-        {
-            value: cpu_p,
-            color:"#17A2B8",
-            highlight: "#FF5A5E",
-            label: "已使用"
-        },
-        {
-            value: 100-cpu_p,
-            color: "#eee",
-            highlight: "#eee",
-            label: "未使用"
-        }
-    ];
-    var mem = {{  params.mem  }};
-    var p_mem = [
-        {
-            value: mem,
-            color:"#17A2B8",
-            highlight: "#FF5A5E",
-            label: "已使用"
-        },
-        {
-            value: 100-mem,
-            color: "#eee",
-            highlight: "#eee",
-            label: "未使用"
-        }
-    ];
-    var disk = {{  params.disk  }};
-    var p_disk = [
-        {
-            value: disk,
-            color:"#17A2B8",
-            highlight: "#FF5A5E",
-            label: "已使用"
-        },
-        {
-            value: 100-disk,
-            color: "#eee",
-            highlight: "#eee",
-            label: "未使用"
-        }
-    ];
     $().ready(function(){
-        var ctxd1 = $("#c_cpu").get(0).getContext("2d");
-        var c_cpu = new Chart(ctxd1).Doughnut(p_cpu);
-
-        var ctxd2 = $("#c_mem").get(0).getContext("2d");
-        var c_mem = new Chart(ctxd2).Doughnut(p_mem);
-
-        var ctxd3 = $("#c_disk").get(0).getContext("2d");
-        var c_disk = new Chart(ctxd3).Doughnut(p_disk);
-
-		$.post('/get_sysstatus',function(res){
-			console.log(res);
-		})
+    	
+    	function updateState(cpu_p,mem,disk){
+		    var p_cpu = [
+		        {
+		            value: cpu_p,
+		            color:"#17A2B8",
+		            highlight: "#FF5A5E",
+		            label: "已使用"
+		        },
+		        {
+		            value: 100-cpu_p,
+		            color: "#eee",
+		            highlight: "#eee",
+		            label: "未使用"
+		        }
+		    ];
+		    var p_mem = [
+		        {
+		            value: mem,
+		            color:"#17A2B8",
+		            highlight: "#FF5A5E",
+		            label: "已使用"
+		        },
+		        {
+		            value: 100-mem,
+		            color: "#eee",
+		            highlight: "#eee",
+		            label: "未使用"
+		        }
+		    ];
+		    var p_disk = [
+		        {
+		            value: disk,
+		            color:"#17A2B8",
+		            highlight: "#FF5A5E",
+		            label: "已使用"
+		        },
+		        {
+		            value: 100-disk,
+		            color: "#eee",
+		            highlight: "#eee",
+		            label: "未使用"
+		        }
+		    ];
+		    var ctxd1 = $("#c_cpu").get(0).getContext("2d");
+	        var c_cpu = new Chart(ctxd1).Doughnut(p_cpu);
+	        
+	        var ctxd2 = $("#c_mem").get(0).getContext("2d");
+	        var c_mem = new Chart(ctxd2).Doughnut(p_mem);
+	
+	        var ctxd3 = $("#c_disk").get(0).getContext("2d");
+	        var c_disk = new Chart(ctxd3).Doughnut(p_disk);
+    	}
+    	$.post('/get_sysstatus',function(res){
+			var jsonObj = JSON.parse(res);
+			updateState(jsonObj.cpu,jsonObj.mem,jsonObj.disk);
+		});
+//  	setInterval(function(){
+//			$.post('/get_sysstatus',function(res){
+//				var jsonObj = JSON.parse(res);
+//				updateState(jsonObj.cpu,jsonObj.mem,jsonObj.disk);
+//			});
+//		},5000);
+    	
+        
+		
 
     })
 

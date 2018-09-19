@@ -2,7 +2,7 @@
 from flask import Flask, render_template
 import func
 import config
-
+import json
 
 app = Flask(__name__)
 app.config.from_object(config)
@@ -59,10 +59,11 @@ def network():
     return render_template('network.html')
 
 
-class If():
-    @app.route('/get_sysstatus')
-    def get_sysstatus():
-        return 'sysstate'
+# class If():
+@app.route('/get_sysstatus', methods=['POST'])
+def get_sysstatus():
+    params = {'cpu':func.getCpuState(), 'mem':func.getMemState(), 'disk':func.getDiskState()}
+    return json.dumps(params)
 
 
 if __name__ == '__main__':

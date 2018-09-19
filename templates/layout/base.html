@@ -69,13 +69,11 @@
     		var path = "{{  request.path  }}";
 //  		path = path.substr(1,path.length);
 	    	$('a.app_item').each(function(){
-	    		console.log($(this).attr('href'))
 	    		if($(this).attr('href')==path){
 	    			$('a.app_item').removeClass('active');
 	    			$(this).addClass('active');
 	    			$('li.treeview').removeClass('is-expanded');
 	    			$(this).parents('li.treeview').addClass('is-expanded');
-	    			console.log('re');
 	    		}
 	    	})
     	})
