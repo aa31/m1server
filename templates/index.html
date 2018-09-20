@@ -395,7 +395,16 @@
 			}
 		},3000);
     	
-        
+        setInterval(function(){
+			$.post('http://127.0.0.1:5000/fps',function(res){
+				var fps = JSON.parse(res);
+				console.log(fps);
+			});
+			i++;
+			if(i==2000000){
+				location.reload();
+			}
+		},3000);
 		
 
     })
