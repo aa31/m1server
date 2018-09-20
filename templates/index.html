@@ -27,13 +27,18 @@
 	.a_titl_body{
 		padding: 1em;
 		font-size: 1.1em;
+		position: relative;
 	}
 	.a_charts_text{
 		position: absolute;top: 50%;left: 50%;
 		transform: translate(-50%,-50%);
-
+		color: #17A2B8;
+		font-size: 1.2em;
 	}
-
+	
+	.a_chart_div{
+		width: 100%;height: 13rem;
+	}
 
 </style>
 {% endblock %}
@@ -59,10 +64,9 @@
 				<div class="a_titl">
 					<div class="a_titl_head">CPU</div>
 					<div class="a_titl_body">
-						<div class="embed-responsive embed-responsive-16by9">
-							<canvas class="embed-responsive-item" id="c_cpu"></canvas>
-							<div class="a_charts_text">{{  params.cpu  }}%</div>
+						<div class="a_chart_div" id="c_cpu">
 						</div>
+						<div class="a_charts_text">{{  params.cpu  }} %</div>
 					</div>
 				</div>
 			</div>
@@ -70,10 +74,9 @@
 				<div class="a_titl">
 					<div class="a_titl_head">内存</div>
 					<div class="a_titl_body">
-						<div class="embed-responsive embed-responsive-16by9">
-							<canvas class="embed-responsive-item" id="c_mem"></canvas>
-							<div class="a_charts_text">{{  params.mem  }}%</div>
+						<div class="a_chart_div" id="c_mem">
 						</div>
+						<div class="a_charts_text">{{  params.mem  }} %</div>
 					</div>
 				</div>
 			</div>
@@ -81,10 +84,9 @@
 				<div class="a_titl">
 					<div class="a_titl_head">磁盘</div>
 					<div class="a_titl_body">
-						<div class="embed-responsive embed-responsive-16by9">
-							<canvas class="embed-responsive-item" id="c_disk"></canvas>
-							<div class="a_charts_text">{{  params.disk  }}%</div>
+						<div class="a_chart_div" id="c_disk">
 						</div>
+						<div class="a_charts_text">{{  params.disk  }} %</div>
 					</div>
 				</div>
 			</div>
@@ -155,7 +157,7 @@
 			</div>
 
 		</div>
-
+		
 
 	</div>  <!--12-->
 	</div>  <!--row-->
@@ -166,9 +168,8 @@
 
 {% block js %}
 
-<script src=" {{ url_for('static', filename='vali-admin/docs/js/main.js') }}"></script>
 <script src=" {{ url_for('static', filename='vali-admin/docs/js/plugins/chart.js') }}"></script>
-
+<script src=" {{ url_for('static', filename='js/echarts-en.js') }}"></script>
 <script type="text/javascript">
     function getSystime(){
         var time,year,month,date,hours,minutes,seconds;
@@ -226,68 +227,173 @@
 <script type="text/javascript">
     $().ready(function(){
     	
-    	function updateState(cpu_p,mem,disk){
-		    var p_cpu = [
-		        {
-		            value: cpu_p,
-		            color:"#17A2B8",
-		            highlight: "#FF5A5E",
-		            label: "已使用"
-		        },
-		        {
-		            value: 100-cpu_p,
-		            color: "#eee",
-		            highlight: "#eee",
-		            label: "未使用"
-		        }
-		    ];
-		    var p_mem = [
-		        {
-		            value: mem,
-		            color:"#17A2B8",
-		            highlight: "#FF5A5E",
-		            label: "已使用"
-		        },
-		        {
-		            value: 100-mem,
-		            color: "#eee",
-		            highlight: "#eee",
-		            label: "未使用"
-		        }
-		    ];
-		    var p_disk = [
-		        {
-		            value: disk,
-		            color:"#17A2B8",
-		            highlight: "#FF5A5E",
-		            label: "已使用"
-		        },
-		        {
-		            value: 100-disk,
-		            color: "#eee",
-		            highlight: "#eee",
-		            label: "未使用"
-		        }
-		    ];
-		    var ctxd1 = $("#c_cpu").get(0).getContext("2d");
-	        var c_cpu = new Chart(ctxd1).Doughnut(p_cpu);
-	        
-	        var ctxd2 = $("#c_mem").get(0).getContext("2d");
-	        var c_mem = new Chart(ctxd2).Doughnut(p_mem);
-	
-	        var ctxd3 = $("#c_disk").get(0).getContext("2d");
-	        var c_disk = new Chart(ctxd3).Doughnut(p_disk);
+//  	setTimeout(function(){
+//  		myChart.setOption({
+//		        series: [{
+//		            data:[
+//		                {value:60, name:'已使用'},
+//		                {value:40, name:'未使用'},
+//		            ]
+//		        }]
+//	    	});
+//  	},3000)
+    	
+    	function initChatrs(cpustate,memstate,diskstate){
+    		cpu = echarts.init(document.getElementById('c_cpu'));
+    		mem = echarts.init(document.getElementById('c_mem'));
+    		disk = echarts.init(document.getElementById('c_disk'));
+    		var cpuOption = {
+			    // 全局调色盘。
+	    		color: ['#17A2B8','#E5E5E5'],
+			    series: [
+			        {
+			            name:'cpu使用率',
+			            type:'pie',
+			            radius: ['50%', '60%'],
+			            avoidLabelOverlap: false,
+			            label: {
+			                normal: {
+			                    show: false,
+			                    position: 'center'
+			                },
+			                emphasis: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: '16',
+			                        fontWeight: 'bold'
+			                    }
+			                }
+			            },
+			            labelLine: {
+			                normal: {
+			                    show: false
+			                }
+			            },
+			            data:[
+			                {value:cpustate, name:''},
+			                {value:100-cpustate, name:''},
+			            ]
+			        }
+			    ]
+			};
+			var memOption = {
+			    // 全局调色盘。
+	    		color: ['#17A2B8','#E5E5E5'],
+			    series: [
+			        {
+			            name:'内存使用率',
+			            type:'pie',
+			            radius: ['50%', '60%'],
+			            avoidLabelOverlap: false,
+			            label: {
+			                normal: {
+			                    show: false,
+			                    position: 'center'
+			                },
+			                emphasis: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: '16',
+			                        fontWeight: 'bold'
+			                    }
+			                }
+			            },
+			            labelLine: {
+			                normal: {
+			                    show: false
+			                }
+			            },
+			            data:[
+			                {value:memstate, name:'已使用'},
+			                {value:100-memstate, name:'未使用'},
+			            ]
+			        }
+			    ]
+			};
+			var diskOption = {
+			    // 全局调色盘。
+	    		color: ['#17A2B8','#E5E5E5'],
+			    series: [
+			        {
+			            name:'硬盘使用率',
+			            type:'pie',
+			            radius: ['50%', '60%'],
+			            avoidLabelOverlap: false,
+			            label: {
+			                normal: {
+			                    show: false,
+			                    position: 'center'
+			                },
+			                emphasis: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: '16',
+			                        fontWeight: 'bold'
+			                    }
+			                }
+			            },
+			            labelLine: {
+			                normal: {
+			                    show: false
+			                }
+			            },
+			            data:[
+			                {value:diskstate, name:'已使用'},
+			                {value:100-diskstate, name:'未使用'},
+			            ]
+			        }
+			    ]
+			};
+    		cpu.setOption(cpuOption);
+    		mem.setOption(memOption);
+    		disk.setOption(diskOption);
     	}
-    	$.post('/get_sysstatus',function(res){
-			var jsonObj = JSON.parse(res);
-			updateState(jsonObj.cpu,jsonObj.mem,jsonObj.disk);
-		});
-//  	setInterval(function(){
-//			$.post('/get_sysstatus',function(res){
-//				var jsonObj = JSON.parse(res);
-//				updateState(jsonObj.cpu,jsonObj.mem,jsonObj.disk);
-//			});
-//		},5000);
+    	
+		initChatrs({{  params.cpu  }},{{  params.mem  }},{{  params.disk  }});    	
+    	
+    	function reCharts(cpustate,memstate,diskstate){
+    		cpu.setOption({
+		        series: [{
+		            data:[
+		                {value:cpustate, name:''},
+		                {value:100-cpustate, name:''},
+		            ]
+	        	}]
+	    	});
+	    	mem.setOption({
+		        series: [{
+		            data:[
+		                {value:memstate, name:''},
+		                {value:100-memstate, name:''},
+		            ]
+	        	}]
+	    	});
+	    	disk.setOption({
+		        series: [{
+		            data:[
+		                {value:diskstate, name:''},
+		                {value:100-diskstate, name:''},
+		            ]
+	        	}]
+	    	});
+	    	$arr = $('.a_charts_text');
+	    	$($arr[0]).text(cpustate+" %");
+	    	$($arr[1]).text(memstate+" %");
+	    	$($arr[2]).text(diskstate+" %");
+	    	
+    	}
+		
+		i=0;
+    	var intervar1 = setInterval(function(){
+			$.post('/get_sysstatus',function(res){
+				var jsonObj = JSON.parse(res);
+				reCharts(jsonObj.cpu,jsonObj.mem,jsonObj.disk);
+			});
+			i++;
+			if(i==2000000){
+				location.reload();
+			}
+		},3000);
     	
         
 		

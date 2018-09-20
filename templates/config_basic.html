@@ -1,10 +1,12 @@
 {% extends "layout/base.html" %}
-{% block head %}
-{% block title %}目标参数{% endblock %} 
+{% block head %}{% block title %}目标参数{% endblock %} 
+
 <style>
 	.a_label{
 		padding-right: 1em;
 		color: #777;
+		font-weight: 600;
+		font-size: 1.35em;
 	}
 	.a_select{
 		width: 10em;
@@ -13,7 +15,6 @@
 		margin-bottom: .2em;
 	}
 </style>
-
 {% endblock %}
 
 {% block main %}
@@ -26,35 +27,43 @@
         </div>
       </div>
       
-      <div class="tile col-md-10 col-sm-12 col-xs-12" style="margin: 0 auto;">
-        <div class="tile-body row">
-        			
-        			
+      <div class="tile col-md-12 col-sm-12 col-xs-12" style="margin: 0 auto;">
+        <div class="tile-body row" style="font-size: 1.1em;font-weight: 600;">
         			<div class="col-md-8" id="video">
         				<div style="margin-bottom: .25em;">
         					<label class="control-label a_label" style="float: left;">实时视频：</label>
-			                <div class="toggle-flip" style="float: left;">
-				                <label>
-				                    <input type="checkbox"><span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
-				                </label>
-	    					</div>
+							 <div class="toggle-flip">
+			                  <label>
+			                    <input data-ischecked="1" id="videoSwitch" type="checkbox" checked="checked"><span id="11" class="flip-indecator" data-toggle-on="开" data-toggle-off="关"></span>
+			                  </label>
+			                </div>				
         				</div>
         				
-        				<img style="width: 100%;" src="http://192.168.0.102:5000/video_feed"/>
+        				<img id="videoImg" style="width: 100%;" src="http://192.168.0.102:5000/video_feed"/>
         			</div>
         	
     				<div class="col-md-4 col-sm-11 col-xs-12">
     					
     					
-    					<div style="margin-top: 3em;">
-    						<label class="a_label">实时帧数：</label><span>70fps</span>&nbsp;&nbsp;&nbsp;
-    						<label class="a_label">cpu：</label><span>60%</span>&nbsp;&nbsp;&nbsp;
-    						<label class="a_label">内存：</label><span>40%</span>&nbsp;&nbsp;&nbsp;
+    					<div style="margin-top: 2.5em;margin-bottom: 1.5em;">
+    						
+    						<div class="row">
+    							<div class="col-md-6">
+    								<label class="a_label">实时帧数：</label><span id="fps">获取中</span>&ensp;FPS
+    							</div>
+    							<div class="col-md-6">
+    								<label class="a_label">cpu：</label><span id="cpu">获取中</span>&ensp;%
+    							</div>
+    							<div class="col-md-6">
+    								<label class="a_label">内存&emsp;&emsp;：</label><span id="mem">获取中</span>&ensp;%
+    							</div>
+    						</div>
+    						
     					</div>
     					
     					<hr />
     					
-    					<div>
+    					<div style="margin-top: 1.5em;margin-bottom: 1.5em;">
 	        				<label for="" class="label a_label">识别参数</label><br />
 				            <span class="label-text" style="margin-right: .8em;">分辨率  ：</span>
 				            <select class="form-control a_select">
@@ -69,48 +78,66 @@
 							  <option>隔帧采样</option>
 							</select>
 	        			</div>
-    					
     					<hr />
     					
     					<div>
 	        				<label for="" class="label a_label">识别目标</label>
-	        				<div class="animated-checkbox">
-				              <label>
-				                <input type="checkbox"><span class="label-text">四旋翼无人机</span>
-				              </label>
-				            </div>
-				            <div class="animated-checkbox">
-				              <label>
-				                <input type="checkbox"><span class="label-text">固定翼无人机</span>
-				              </label>
-				            </div>
-				            <div class="animated-checkbox">
-				              <label>
-				                <input type="checkbox"><span class="label-text">气球</span>
-				              </label>
-				            </div>
-				            <div class="animated-checkbox">
-				              <label>
-				                <input type="checkbox"><span class="label-text">风筝</span>
-				              </label>
-				            </div>
-				            <div class="animated-checkbox">
-				              <label>
-				                <input type="checkbox"><span class="label-text">人</span>
-				              </label>
-				            </div>
-				            <div class="animated-checkbox">
-				              <label>
-				                <input type="checkbox"><span class="label-text">车</span>
-				              </label>
-				            </div>
-				            
-							<button id="btn">
+	        				
+	        				<div class="row">
+	        					<div class="col-md-6">
+	        						<div class="animated-checkbox">
+						              <label>
+						                <input checked="" type="checkbox"><span class="label-text">四旋翼无人机</span>
+						              </label>
+						            </div>
+	        					</div>
+	        					<div class="col-md-6">
+	        						 <div class="animated-checkbox">
+						              <label>
+						                <input checked="" type="checkbox"><span class="label-text">固定翼无人机</span>
+						              </label>
+						            </div>
+	        					</div>
+	        					<div class="col-md-6">
+	        						 <div class="animated-checkbox">
+						              <label>
+						                <input disabled="disabled" type="checkbox"><span class="label-text">气球</span>
+						              </label>
+						            </div>
+	        					</div>
+	        					<div class="col-md-6">
+	        						 <div class="animated-checkbox">
+						              <label>
+						               <input disabled="disabled" type="checkbox"><span class="label-text">气球</span>
+						              </label>
+						            </div>
+	        					</div>
+	        					<div class="col-md-6">
+	        						 <div class="animated-checkbox">
+						              <label>
+						               <input disabled="disabled" type="checkbox"><span class="label-text">人</span>
+						              </label>
+						            </div>
+	        					</div>
+	        					<div class="col-md-6">
+	        						 <div class="animated-checkbox">
+						              <label>
+						               <input disabled="disabled" type="checkbox"><span class="label-text">车</span>
+						              </label>
+						            </div>
+	        					</div>
+	        				</div>
+	        			</div>
+    					<hr />
+    					
+    					<div class="">
+    						<label for="" class="label a_label">视频操作</label><br />
+    						<button class="btn btn-info" id="btn">
 								全屏
 							</button>
-	        			</div>
+    					</div>
     					
-    					<hr />
+    					
         			</div>
         			
       </div>
@@ -122,14 +149,41 @@
 {% block js %}
 
 <script src=" {{ url_for('static', filename='vali-admin/docs/js/popper.min.js') }}"></script>
-<script src=" {{ url_for('static', filename='vali-admin/docs/js/main.js') }}"></script>
 <script src=" {{ url_for('static', filename='vali-admin/docs/js/plugins/pace.min.js') }}"></script>
 <script src=" {{ url_for('static', filename='vali-admin/docs/js/plugins/chart.js') }}"></script>
+
+
 <script type="text/javascript">
 	$('#btn').click(function(){
 		$('#video').removeClass('col-md-8');
 		$('#video').addClass('col-md-12');
 	});
+	
+	$('#videoSwitch').click(function(){
+		var isChecked = $(this).attr('data-ischecked');
+		if(isChecked==1){
+			$(this).attr('data-ischecked',0);
+			$('#videoImg').css('display','none');
+		}else{
+			$(this).attr('data-ischecked',1);
+			$('#videoImg').css('display','block');
+		}
+	});
+	
+	i=0;
+	var intervar1 = setInterval(function(){
+		$.post('/get_sysstatus',function(res){
+			var jsonObj = JSON.parse(res);
+			$('#cpu').text(jsonObj.cpu);
+			$('#mem').text(jsonObj.mem);
+		});
+		i++;
+		if(i==2000000){
+			location.reload();
+		}
+	},3000);
+	
+	
 </script>
 {% endblock %}
 

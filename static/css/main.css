@@ -14293,7 +14293,7 @@ be a descendant of the grid when it is being dragged.
 
 .animated-checkbox input[type="checkbox"]:checked + .label-text:before {
   content: "";
-  color: #009688;
+  color: #17a2b8;
   -webkit-animation: tick 180ms ease-in;
           animation: tick 180ms ease-in;
 }
@@ -14471,7 +14471,7 @@ be a descendant of the grid when it is being dragged.
 
 .toggle-flip input[type="checkbox"] + .flip-indecator:after {
   content: attr(data-toggle-on);
-  background-color: #009688;
+  background-color: #17a2b8;
   color: #fff;
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
