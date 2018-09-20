@@ -42,8 +42,8 @@ def get_systimes():
 # 获取ip和网关
 def get_ipnetmask():
     if_addrs = psutil.net_if_addrs()
-	# if_list = if_addrs['本地连接']
-      if_list = if_addrs['eth0']
+    # if_list = if_addrs['本地连接']
+    if_list = if_addrs['eth0']
     for i in range(len(if_list)):
         if 'AddressFamily.AF_INET: 2' in str(if_list[i]):
             return if_list[i]
