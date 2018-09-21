@@ -3,16 +3,19 @@
 
 <style>
 	.a_label{
-		padding-right: 1em;
+		padding-right: .75em;
 		color: #777;
 		font-weight: 600;
-		font-size: 1.35em;
+		font-size: 1.25em;
 	}
 	.a_select{
 		width: 10em;
 		display: inline-block;
 		margin-left: 1em;
 		margin-bottom: .2em;
+	}
+	.a_display_none{
+		display: none;
 	}
 </style>
 {% endblock %}
@@ -34,9 +37,11 @@
         					<label class="control-label a_label" style="float: left;">实时视频：</label>
 							 <div class="toggle-flip">
 			                  <label>
-			                    <input data-ischecked="1" id="videoSwitch" type="checkbox" checked="checked"><span id="11" class="flip-indecator" data-toggle-on="开" data-toggle-off="关"></span>
+			                    <input data-ischecked="1" id="videoSwitch" type="checkbox" checked="checked"><span class="flip-indecator" data-toggle-on="开" data-toggle-off="关"></span>
 			                  </label>
-			                </div>				
+			                  <button id="exitFull" style="float: right;" class="btn btn-info btn-sm a_display_none">退出全屏</button>
+			                  
+			                </div>
         				</div>
         				
         				<img id="videoImg" style="width: 100%;" src="http://192.168.0.102:5000/video_feed"/>
@@ -154,9 +159,23 @@
 
 
 <script type="text/javascript">
-	$('#btn').click(function(){
+	function fullScreen(){
 		$('#video').removeClass('col-md-8');
 		$('#video').addClass('col-md-12');
+		$('#exitFull').removeClass('a_display_none');
+	}
+	function exitFullScreen(){
+		$('#video').removeClass('col-md-12');
+		$('#video').addClass('col-md-8');
+		$('#exitFull').addClass('a_display_none');
+	}
+	
+	$('#exitFull').click(function(){
+		exitFullScreen();
+	});
+	
+	$('#btn').click(function(){
+		fullScreen();
 	});
 	
 	$('#videoSwitch').click(function(){
@@ -170,6 +189,8 @@
 		}
 	});
 	
+	
+	
 	i=0;
 	var intervar1 = setInterval(function(){
 		$.post('/get_sysstatus',function(res){
@@ -182,7 +203,24 @@
 			location.reload();
 		}
 	},3000);
+
+
+	i2=0;
+	setInterval(function(){
+		i2++;
+		$.post('127.0.0.1:5000/fps',function(res){
+			$('#fps').text(res);
+			console.log(res);
+		});
+		if(i2==2000000){
+			location.reload();
+		}
+	},3000);
+
 	
+	$(function(){
+		
+	});
 	
 </script>
 {% endblock %}
