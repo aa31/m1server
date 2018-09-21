@@ -205,23 +205,27 @@
 	},3000);
 
 
-	
-	
-
-	
 	$(function(){
 		i2=0;
 		setInterval(function(){
 			i2++;
-			$.post('http://127.0.0.1:5000/fps',function(res){
-				$('#fps').text(res);
-				console.log(res);
+			$.ajax({
+			   url: 'http://127.0.0.1:5000/fps',
+			   dataType: "jsonp",
+			   jsonp: "callback",
+			   jsonpCallback:"callback",
+			   data:'callback=?',
+			   success: function (res) {
+			       $('#fps').text(res);
+						console.log(res);
+			   }
 			});
 			if(i2==2000000){
 				location.reload();
 			}
-		},3000);
+		},2000);
 	});
+	
 	
 </script>
 {% endblock %}
