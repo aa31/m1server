@@ -1,6 +1,8 @@
 import psutil
 import time
 import math
+import os
+
 
 def get_net_addrs():
     return psutil.net_if_addrs()
@@ -24,19 +26,6 @@ def getDiskState():
 # 获取系统时间
 def get_systimes():
     return time.strftime('%Y/%m/%d %H:%M:%S',time.localtime(time.time()))
-
-
-# print('cpu物理个数：%s , 逻辑个数 %s' %(psutil.cpu_count(logical=False),psutil.cpu_count()))
-# print('cpu占用率%s' % (getCpuState()))
-# # print('总内存： %s' % (psutil.virtual_memory().total))
-# print('内存占用率： %s' % (getMemState()))
-# print('硬盘占用率 %s' % (str(psutil.disk_usage('/').percent)))
-# print('系统时间: %s' % (get_systimes()))
-
-# print('网络信息：%s' % (if_addrs))
-# print('网络信息：%s' % (ps
-# util.net_if_stats()))
-
 
 
 # 获取ip和网关
@@ -80,7 +69,6 @@ def changeTime(allTime):
 # 系统运行时间  时间戳
 def get_stsruntime():
     return time.time()-psutil.boot_time()
-
 
 
 

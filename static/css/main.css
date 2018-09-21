@@ -15245,6 +15245,21 @@ be a descendant of the grid when it is being dragged.
 }
 
 
+.a_title{
+	padding-right: .75em;
+	color: #777;
+	font-weight: 600;
+	font-size: 1.25em;
+}
 
+.a_label2{
+	font-size: 1.1em;font-weight: 600;
+	position: relative;
+	top: .4em;
+}
+
+.a_sm_content{
+	margin: 10em auto 0 auto;padding: 2em;
+}
 
 

@@ -1,82 +1,188 @@
-{% extends "layout/base.html" %}
-{% block head %}
-{% block title %}网络配置{% endblock %} 
-{% endblock %}
+{% extends "layout/base.html" %} {% block head %} {% block title %}网络配置{% endblock %}
 
-{% block main %}
+<style type="text/css">
+	.a_title {
+		margin-bottom: 1.5em;
+	}
+	.a_label2{
+		font-size: 1.1em;font-weight: 600;
+		position: relative;
+		top: .4em;
+	}
+	.a_row_item{
+		margin-bottom: 2em;
+	}
+	
+</style>
 
+{% endblock %} {% block main %}
 
-    <main class="app-content">
-    	
+<main class="app-content">
+
 	<div class="app-title">
-	    <div>
-	      <h1>网络信息</h1>
-	      <!--<p>Start a beautiful journey here</p>-->
-	    </div>
-    </div>
-    
-    <div class="tile col-md-10 col-sm-12 col-xs-12" style="margin: 0 auto;">
-    	<div class="tile-body row">
-    		<div class="col-md-8">
-    			<form class="form-horizontal">
-	                <div class="form-group row">
-	                  <label class="control-label col-md-3 a_label">联网方式：</label>
-	                  <div class="col-md-9">
-	                    <div class="form-check">
-	                      <label class="form-check-label">
-	                        <input class="form-check-input" type="radio" name="gender">动态ip
+		<div>
+			<h1>网络信息</h1>
+			<!--<p>Start a beautiful journey here</p>-->
+		</div>
+	</div>
+
+	<div class="col-md-12 col-sm-12 col-xs-12" style="margin: 0 auto;">
+		
+		<div class="row tile">
+			<div class="col-md-6">
+				<div class="a_title">网络信息</div>
+				<form class="form-horizontal" action="" method="post">
+					<div class="row a_row_item">
+						<label class="control-label col-md-3 a_label2 " style="top: 0;">联网方式：</label>
+		                  <div class="col-md-6">
+		                    <div class="form-check " style="padding: 0;">
+		                      <div class="animated-radio-button" style="line-height: 1.5em;">
+					              <label>
+					                <input type="radio"><span class="label-text">静态ip </span>
+					              </label>
+					              &emsp;
+					              <label>
+					                <input type="radio" checked=""><span class="label-text">动态ip </span>
+					              </label>
+					            </div>
+		                    </div>
+		                  </div>
+					</div>
+					<div class="row a_row_item">
+						<label class="control-label col-md-3 a_label2 ">端口&emsp;&emsp;：</label>
+		                  <div class="col-md-6">
+			                    <input class="form-control " type="text " placeholder=" " value="8000 ">
+		                  </div>
+					</div>
+					<div class="row a_row_item">
+						<label class="control-label col-md-3 a_label2 ">子网掩码：</label>
+		                  <div class="col-md-6">
+			                    <input class="form-control " type="text " placeholder=" " value="255.255.255.0 ">
+		                  </div>
+					</div>
+					<div class="row a_row_item">
+						<label class="control-label col-md-3 a_label2 ">网关&emsp;&emsp;：</label>
+		                  <div class="col-md-6">
+			                    <input class="form-control " type="text " placeholder=" " value="192.168.1.1 ">
+		                  </div>
+					</div>
+					<div class="row a_row_item">
+						<label class="control-label col-md-3 a_label2 ">主DNS&emsp;：</label>
+		                  <div class="col-md-6">
+			                    <input class="form-control " type="text " placeholder=" " value="255.255.255.0">
+		                  </div>
+					</div>
+					<div class="row a_row_item">
+						<label class="control-label col-md-3 a_label2 ">次DNS&emsp;：</label>
+		                  <div class="col-md-6">
+			                    <input class="form-control " type="text " placeholder=" " value=" ">
+		                  </div>
+		                  <div class="col-md-3" style="line-height: 3em;">无</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<div class="a_title">其他配置</div>
+				<form class="form-horizontal" action="" method="post">
+					<div class="row a_row_item">
+						<label class="control-label col-md-3 a_label2 ">上位机IP：</label>
+		                  <div class="col-md-6">
+			                    <input class="form-control " type="text " placeholder=" " value="192.168.1.1 ">
+		                  </div>
+					</div>
+					<div class="row a_row_item">
+						<label class="control-label col-md-3 a_label2 ">上位机端口：</label>
+		                  <div class="col-md-6">
+			                    <input class="form-control " type="text " placeholder=" " value="80">
+		                  </div>
+					</div>
+					<div class="row a_row_item">
+						<label class="control-label col-md-3 a_label2 ">光电RTSP：</label>
+		                  <div class="col-md-6">
+			                    <input class="form-control " type="text " placeholder=" " value="">
+		                  </div>
+					</div>
+				</form>
+			</div>
+			
+			<div class="col-md-12">
+				<div style="margin: 3em auto 1em auto;width: 100%;text-align: center;">
+					<input class="btn btn-info" type="submit" value="确定"/>
+					<button class="btn" style="margin-left: 2em;">取消</button>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--
+        	作者：offline
+        	时间：2018-09-21
+        	描述：
+        
+		
+		<div class="row">
+			<div class="tile col-md-6">
+				<div class="a_title" ">网络信息</div>
+    			<!--<form class="form-horizontal ">
+	                <div class="form-group row ">
+	                  <label class="control-label col-md-3 a_label2 ">联网方式：</label>
+	                  <div class="col-md-9 ">
+	                    <div class="form-check ">
+	                      <label class="form-check-label ">
+	                        <input class="form-check-input" type="radio " name="gender ">动态ip
 	                      </label>
-	                      <label class="form-check-label" style="margin-left: 6em;">
-	                        <input class="form-check-input" type="radio" name="gender">静态ip
+	                      <label class="form-check-label" style="margin-left: 6em; ">
+	                        <input class="form-check-input" type="radio " name="gender ">静态ip
 	                      </label>
 	                    </div>
 	                  </div>
 	                </div>
 	                
-	                <div class="form-group row">
-	                  <label class="control-label col-md-3 a_label">端口：</label>
-	                  <div class="col-md-6">
-	                    <input class="form-control" type="text" placeholder="" value="8000">
+	                <div class="form-group row ">
+	                  <label class="control-label col-md-3 a_label2 ">端口：</label>
+	                  <div class="col-md-6 ">
+	                    <input class="form-control " type="text " placeholder=" " value="8000 ">
 	                  </div>
 	                </div>
 	                
-	                <div class="form-group row">
-	                  <label class="control-label col-md-3 a_label">子网掩码：</label>
-	                  <div class="col-md-6">
-	                    <input class="form-control" type="text" placeholder="" value="255.255.255.0">
+	                <div class="form-group row ">
+	                  <label class="control-label col-md-3 a_label2 ">子网掩码：</label>
+	                  <div class="col-md-6 ">
+	                    <input class="form-control " type="text " placeholder=" " value="255.255.255.0 ">
 	                  </div>
 	                </div>
 	                
-	                <div class="form-group row">
-	                  <label class="control-label col-md-3 a_label">网关：</label>
-	                  <div class="col-md-6">
-	                    <input class="form-control" type="text" placeholder="" value="192.168.1.1">
+	                <div class="form-group row ">
+	                  <label class="control-label col-md-3 a_label2 ">网关：</label>
+	                  <div class="col-md-6 ">
+	                    <input class="form-control " type="text " placeholder=" " value="192.168.1.1 ">
 	                  </div>
 	                </div>
 	                
-	                <div class="form-group row">
-	                  <label class="control-label col-md-3 a_label">主DNS：</label>
-	                  <div class="col-md-6">
-	                    <input class="form-control" type="text" placeholder="" value="192.168.1.1">
+	                <div class="form-group row ">
+	                  <label class="control-label col-md-3 a_label2 ">主DNS：</label>
+	                  <div class="col-md-6 ">
+	                    <input class="form-control " type="text " placeholder=" " value="192.168.1.1 ">
 	                  </div>
 	                </div>
 	                
-	                <div class="form-group row">
-	                  <label class="control-label col-md-3 a_label">次DNS：</label>
-	                  <div class="col-md-6">
-	                    <input class="form-control" type="text" placeholder="" value="0.0.0.0">
+	                <div class="form-group row ">
+	                  <label class="control-label col-md-3 a_label2 ">次DNS：</label>
+	                  <div class="col-md-6 ">
+	                    <input class="form-control " type="text " placeholder=" " value="0.0.0.0 ">
 	                  </div>
-	                  <div class="col-md-2">非必填</div>
+	                  <div class="col-md-2 ">非必填</div>
 	                </div>
 	                
-	                <div class="center-block">
-	                	<button class="btn btn-info">确定</button>
-	                	<button class="btn">取消</button>
+	                <div class="center-block ">
+	                	<button class="btn btn-info ">确定</button>
+	                	<button class="btn ">取消</button>
 	                </div>
-          		</form>
-    		</div>
-    		
-    	</div>
+          		</form>-->
+    	
+    	
+    	
+    	
     </div>
     </main>
 {% endblock %}
@@ -84,11 +190,8 @@
 
 {% block js %}
 
-<script src=" {{ url_for('static', filename='vali-admin/docs/js/popper.min.js') }}"></script>
-<script src=" {{ url_for('static', filename='vali-admin/docs/js/plugins/pace.min.js') }}"></script>
-<script src=" {{ url_for('static', filename='vali-admin/docs/js/plugins/chart.js') }}"></script>
+<script src=" {{ url_for( 'static', filename='vali-admin/docs/js/popper.min.js' ) }} "></script>
+<script src=" {{ url_for( 'static', filename='vali-admin/docs/js/plugins/pace.min.js' ) }} "></script>
+<script src=" {{ url_for( 'static', filename='vali-admin/docs/js/plugins/chart.js' ) }} "></script>
 
 {% endblock %}
-
-
-

@@ -13,7 +13,7 @@
     
 </head>
 <body class="app sidebar-mini rtl">
-	
+	<div id="aside_header">
 	{% block header %}
 	<!-- Navbar-->
     <header class="app-header"><a class="app-header__logo" href="{{ url_for('index') }}">
@@ -58,7 +58,7 @@
     </aside>
     
 	{% endblock %}
-
+</div>
 
 	{% block main %}
     {% endblock %}

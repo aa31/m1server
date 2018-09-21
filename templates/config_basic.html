@@ -72,15 +72,14 @@
 	        				<label for="" class="label a_label">识别参数</label><br />
 				            <span class="label-text" style="margin-right: .8em;">分辨率  ：</span>
 				            <select class="form-control a_select">
-				              <option>自适应</option>
-							  <option>800*600</option>
-							  <option>1024*768</option>
-							  <option>1920*1080</option>
+							  <option value="0">800*600</option>
+							  <option value="1">1024*768</option>
+							  <option value="2">1920*1080</option>
 							</select><br />
 							<span class="label-text">采样方式：</span>
 				            <select class="form-control a_select">
-							  <option>每帧采样</option>
-							  <option>隔帧采样</option>
+							  <option value="0">每帧采样</option>
+							  <option value="1">隔帧采样</option>
 							</select>
 	        			</div>
     					<hr />
@@ -210,14 +209,13 @@
 		setInterval(function(){
 			i2++;
 			$.ajax({
-			   url: 'http://127.0.0.1:5000/fps',
+			   url: 'http://192.168.0.102:5000/fps',
 			   dataType: "jsonp",
 			   jsonp: "callback",
 			   jsonpCallback:"callback",
 			   data:'callback=?',
 			   success: function (res) {
 			       $('#fps').text(res);
-						console.log(res);
 			   }
 			});
 			if(i2==2000000){

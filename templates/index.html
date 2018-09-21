@@ -53,7 +53,7 @@
 			<h1> <i class="fa fa-home fa-lg"></i> </h1>
 		</div>
 		<div class="col-md-6">
-			<div style="float:right;font-size: 1em;text-align: right;color: red;">试用版本,有效期:2018年9月14日</div>
+			<div style="float:right;font-size: 1em;text-align: right;color: red;">试用版本,有效期:2018年9月28日</div>
 		</div>
 	</div>
 
@@ -394,18 +394,7 @@
 				location.reload();
 			}
 		},3000);
-    	
-        setInterval(function(){
-			$.post('http://127.0.0.1:5000/fps',function(res){
-				var fps = JSON.parse(res);
-				console.log(fps);
-			});
-			i++;
-			if(i==2000000){
-				location.reload();
-			}
-		},3000);
-		
+
 
     })
 
