@@ -44,7 +44,7 @@
 			                </div>
         				</div>
         				
-        				<img id="videoImg" style="width: 100%;" src="http://192.168.0.102:5000/video_feed"/>
+        				<img id="videoImg" style="width: 100%;" src="http://127.0.0.1:5000/video_feed"/>
         			</div>
         	
     				<div class="col-md-4 col-sm-11 col-xs-12">
@@ -209,7 +209,8 @@
 		setInterval(function(){
 			i2++;
 			$.ajax({
-			   url: 'http://192.168.0.102:5000/fps',
+			   // url: 'http://192.168.0.102:5000/fps',
+				url: 'http://127.0.0.1:5000/fps',
 			   dataType: "jsonp",
 			   jsonp: "callback",
 			   jsonpCallback:"callback",
