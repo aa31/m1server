@@ -1,11 +1,13 @@
 # coding=utf-8
-from flask import Flask, render_template,make_response
+from flask import Flask, render_template
 import func
 import config
 import json
+from API import post
 
 app = Flask(__name__)
-app.config.from_object(config)
+
+
 
 @app.route('/')
 def index():
@@ -77,6 +79,9 @@ def getAllConfig():
 
 
 if __name__ == '__main__':
+    app.register_blueprint(post.bp)
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+    app.config.from_object(config)
     app.config['JSON_AS_ASCII'] = False
     app.run(host='0.0.0.0', port=app.config['PORT'])
 

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<root>
-	<video>
-		<resolution no="2">1920*1080</resolution>
-		<coltype no="0">每帧采样</coltype>
-	</video>
-</root>
