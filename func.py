@@ -87,7 +87,8 @@ def readJson(filename):
 
 def jsonInit():
     video = {"resolution": "2", "coltype": "0", "target":"0,1"}
-    data = {"video": video}
+    swj = {"ip": "", "port": "", "trsp": ""}
+    data = {"video": video, "swj": swj}
     createJson('config.json', data)
     resolution = {'0': "800*600", '1': "1024*768", '2': "1920*1080"}
     coltype = {'0': "每帧采样", '1': "隔帧采样"}

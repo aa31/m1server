@@ -30,6 +30,11 @@ def config_network():
     return render_template('config_network.html')
 
 
+@app.route('/config_swj')
+def config_swj():
+    return render_template('config_swj.html')
+
+
 @app.route('/sys_upd')
 def sys_upd():
     return render_template('sys_upd.html')
