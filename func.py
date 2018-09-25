@@ -1,6 +1,7 @@
 import psutil
 import time
 import math
+import json
 import os
 
 
@@ -31,8 +32,8 @@ def get_systimes():
 # 获取ip和网关
 def get_ipnetmask():
     if_addrs = psutil.net_if_addrs()
-    # if_list = if_addrs['本地连接']
-    if_list = if_addrs['eth0']
+    if_list = if_addrs['本地连接']
+    # if_list = if_addrs['eth0']
     for i in range(len(if_list)):
         if 'AddressFamily.AF_INET: 2' in str(if_list[i]):
             return if_list[i]
@@ -71,4 +72,29 @@ def get_stsruntime():
     return time.time()-psutil.boot_time()
 
 
+# 创建json文件并保存
+def createJson(filename,data):
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False)
+
+
+# 读取数据
+def readJson(filename):
+    with open(filename, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        return data
+
+
+def jsonInit():
+    video = {"resolution": "2", "coltype": "0", "target":"0,1"}
+    data = {"video": video}
+    createJson('config.json', data)
+    resolution = {'0': "800*600", '1': "1024*768", '2': "1920*1080"}
+    coltype = {'0': "每帧采样", '1': "隔帧采样"}
+    target = {'0': "四旋翼无人机", '1': "固定翼无人机",'2':'气球', '3':"风筝","4":"人","5":"车"}
+    data = {'resolution': resolution, 'coltype': coltype, "target":target}
+    createJson('./static/json/videoParams.json', data)
+
+
+jsonInit()
 

@@ -3,8 +3,6 @@ from flask import Flask, render_template,make_response
 import func
 import config
 import json
-import xmlFuc
-
 
 app = Flask(__name__)
 app.config.from_object(config)
@@ -22,7 +20,9 @@ def login():
 
 @app.route('/config_basic')
 def config_basic():
-    return render_template('config_basic.html')
+    params = func.readJson('./static/json/videoParams.json')
+    video_config = func.readJson('config.json')
+    return render_template('config_basic.html', params = params, video_config = video_config)
 
 
 @app.route('/config_network')
@@ -60,15 +60,19 @@ def network():
     return render_template('network.html')
 
 
-# class If():
 @app.route('/get_sysstatus', methods=['POST'])
 def get_sysstatus():
     params = {'cpu':func.getCpuState(), 'mem':func.getMemState(), 'disk':func.getDiskState()}
     return json.dumps(params)
 
 
-xmlFuc.basic()
+@app.route('/getAllConfig', methods=['POST'])
+def getAllConfig():
+    return json.dumps(func.readJson("config.json"));
+
+
 if __name__ == '__main__':
+    app.config['JSON_AS_ASCII'] = False
     app.run(host='0.0.0.0', port=app.config['PORT'])
 
 

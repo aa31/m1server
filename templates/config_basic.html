@@ -71,15 +71,16 @@
     					<div style="margin-top: 1.5em;margin-bottom: 1.5em;">
 	        				<label for="" class="label a_label">识别参数</label><br />
 				            <span class="label-text" style="margin-right: .8em;">分辨率  ：</span>
-				            <select class="form-control a_select">
-							  <option value="0">800*600</option>
-							  <option value="1">1024*768</option>
-							  <option value="2">1920*1080</option>
+				            <select id="resolution" class="form-control a_select">
+								{% for resolution in params.resolution %}
+									<option value="{{resolution}}">{{params.resolution[resolution]}}</option>
+								{% endfor %}
 							</select><br />
 							<span class="label-text">采样方式：</span>
-				            <select class="form-control a_select">
-							  <option value="0">每帧采样</option>
-							  <option value="1">隔帧采样</option>
+				            <select id="coltype" class="form-control a_select">
+								{% for coltype in params.coltype %}
+									<option value="{{coltype}}">{{params.coltype[coltype]}}</option>
+								{% endfor %}
 							</select>
 	        			</div>
     					<hr />
@@ -88,48 +89,17 @@
 	        				<label for="" class="label a_label">识别目标</label>
 	        				
 	        				<div class="row">
-	        					<div class="col-md-6">
+
+								{% for target in params.target %}
+								<div class="col-md-6">
 	        						<div class="animated-checkbox">
 						              <label>
-						                <input checked="" type="checkbox"><span class="label-text">四旋翼无人机</span>
+						                <input class="targetItem" value="{{target}}" checked="" type="checkbox"><span class="label-text">{{params.target[target]}}</span>
 						              </label>
 						            </div>
 	        					</div>
-	        					<div class="col-md-6">
-	        						 <div class="animated-checkbox">
-						              <label>
-						                <input checked="" type="checkbox"><span class="label-text">固定翼无人机</span>
-						              </label>
-						            </div>
-	        					</div>
-	        					<div class="col-md-6">
-	        						 <div class="animated-checkbox">
-						              <label>
-						                <input disabled="disabled" type="checkbox"><span class="label-text">气球</span>
-						              </label>
-						            </div>
-	        					</div>
-	        					<div class="col-md-6">
-	        						 <div class="animated-checkbox">
-						              <label>
-						               <input disabled="disabled" type="checkbox"><span class="label-text">气球</span>
-						              </label>
-						            </div>
-	        					</div>
-	        					<div class="col-md-6">
-	        						 <div class="animated-checkbox">
-						              <label>
-						               <input disabled="disabled" type="checkbox"><span class="label-text">人</span>
-						              </label>
-						            </div>
-	        					</div>
-	        					<div class="col-md-6">
-	        						 <div class="animated-checkbox">
-						              <label>
-						               <input disabled="disabled" type="checkbox"><span class="label-text">车</span>
-						              </label>
-						            </div>
-	        					</div>
+								{% endfor %}
+
 	        				</div>
 	        			</div>
     					<hr />
@@ -139,13 +109,20 @@
     						<button class="btn btn-info" id="btn">
 								全屏
 							</button>
+
+							<button class="btn btn-info" id="save">
+								保存配置
+							</button>
+
+							<input style="display: none;" name="" id="video_config" value="{{video_config}}" type="text" />
+
     					</div>
     					
     					
         			</div>
         			
       </div>
-      
+     </div>
     </main>
 {% endblock %}
 
@@ -158,6 +135,7 @@
 
 
 <script type="text/javascript">
+
 	function fullScreen(){
 		$('#video').removeClass('col-md-8');
 		$('#video').addClass('col-md-12');
@@ -188,7 +166,30 @@
 		}
 	});
 	
-	
+
+
+	$.post('/getAllConfig',function(res){
+			var jsonObj = JSON.parse(res);
+			var videoObj = jsonObj.video;
+			var target = videoObj.target;
+			var coltype = videoObj.coltype;
+			var resolution = videoObj.resolution;
+			$('#resolution option[value='+resolution+']').attr('selected','')
+			$('#coltype option[value='+coltype+']').attr('selected','')
+			targetArr = target.split(",");
+			$('.targetItem').each(function(){
+				$(this).removeAttr('checked');
+				$(this).removeAttr('disabled');
+				var val = $(this).val();
+				if($.inArray(val, targetArr)!=-1){
+					$(this).attr('checked',"");
+				}else{
+					$(this).attr('disabled',"");
+				}
+			});
+			
+	});
+
 	
 	i=0;
 	var intervar1 = setInterval(function(){
