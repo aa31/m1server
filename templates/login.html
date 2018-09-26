@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/font.css') }}" />
     <title>登录 - m1人机交互系统</title>
-    
 </head>
 
 <body>
@@ -77,6 +76,7 @@
       	return false;
       });
       
+			
       $('#login').click(function(){
       	var pwd = $('#password').val();
       	if(pwd!='123456'){

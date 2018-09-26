@@ -2,9 +2,9 @@ import psutil
 import time
 import math
 import json
-import os
 
 
+# 网络信息
 def get_net_addrs():
     return psutil.net_if_addrs()
 
@@ -32,8 +32,8 @@ def get_systimes():
 # 获取ip和网关
 def get_ipnetmask():
     if_addrs = psutil.net_if_addrs()
-    if_list = if_addrs['本地连接']
-    # if_list = if_addrs['eth0']
+    # if_list = if_addrs['本地连接']
+    if_list = if_addrs['eth0']
     for i in range(len(if_list)):
         if 'AddressFamily.AF_INET: 2' in str(if_list[i]):
             return if_list[i]
@@ -44,12 +44,12 @@ def get_ip():
     return get_ipnetmask().address
 
 
-# 本地连接
 # 获取网关
 def get_netmask():
     return get_ipnetmask().netmask
 
 
+# 时间格式化
 def changeTime(allTime):
     day = 24*60*60
     hour = 60*60
@@ -67,7 +67,7 @@ def changeTime(allTime):
         return "%d 分钟 %d 秒"%(int(mins[0]),math.ceil(mins[1]))
 
 
-# 系统运行时间  时间戳
+# 获取系统运行时间
 def get_stsruntime():
     return time.time()-psutil.boot_time()
 
@@ -76,6 +76,7 @@ def get_stsruntime():
 def createJson(filename,data):
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False)
+        f.close()
 
 
 # 读取数据

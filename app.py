@@ -65,6 +65,11 @@ def sys_time():
 @app.route('/network')
 def network():
     return render_template('network.html')
+	
+	
+@app.route('/test')
+def test():
+    return render_template('test.html')
 
 
 @app.route('/get_sysstatus', methods=['POST'])
@@ -78,11 +83,13 @@ def getAllConfig():
     return json.dumps(func.readJson("config.json"));
 
 
+app.register_blueprint(post.bp)
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config.from_object(config)
+app.config['JSON_AS_ASCII'] = False
+
+
 if __name__ == '__main__':
-    app.register_blueprint(post.bp)
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-    app.config.from_object(config)
-    app.config['JSON_AS_ASCII'] = False
     app.run(host='0.0.0.0', port=app.config['PORT'])
 
 

@@ -154,6 +154,15 @@
 	$('#btn').click(function(){
 		fullScreen();
 	});
+
+
+	$("#save").click(function () {
+	    var resolution = $("#resolution").val();
+	    var coltype = $("#coltype").val();
+		$.post('/reconfig_swj',{resolution:resolution, coltype:coltype},function(res){
+				
+		});
+    });
 	
 	$('#videoSwitch').click(function(){
 		var isChecked = $(this).attr('data-ischecked');
