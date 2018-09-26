@@ -3,8 +3,8 @@ import json
 import func
 
 # from models import User
-
 bp = Blueprint('post',__name__)
+
 
 @bp.route('/reconfig_video', methods=['GET','POST'])
 def reconfig_video():
@@ -34,3 +34,14 @@ def reconfig_swj():
     pass
     func.createJson('config.json', jsonData)
     return json.dumps(jsonData)
+
+
+@bp.route('/get_sysstatus', methods=['POST'])
+def get_sysstatus():
+    params = {'cpu':func.getCpuState(), 'mem':func.getMemState(), 'disk':func.getDiskState()}
+    return json.dumps(params)
+
+
+@bp.route('/getAllConfig', methods=['POST'])
+def getAllConfig():
+    return json.dumps(func.readJson("config.json"))

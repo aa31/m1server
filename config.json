@@ -1,1 +1,1 @@
-{"video": {"resolution": "0", "coltype": "1", "target": "0,1"}, "swj": {"ip": "192.168.1.1", "port": "80", "rtsp": "https://test.com/rtsp"}}
+{"video": {"resolution": "2", "coltype": "1", "target": "0,1"}, "swj": {"ip": "192.168.1.1", "port": "80", "rtsp": "https://test.com/rtsp"}}
