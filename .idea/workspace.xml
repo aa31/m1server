@@ -3,12 +3,993 @@
   <component name="ChangeListManager">
     <list default="true" id="9d8d10ec-6691-4a58-933f-db0655cd0586" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/func.py" beforeDir="false" afterPath="$PROJECT_DIR$/func.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/config_basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/config_basic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/config_swj.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/config_swj.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/.eslintrc.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/.github/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/.headerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/.jshintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/.jshintrc-dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/DISCLAIMER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/KEYS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/asset/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/build/.jshintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/build/addHeader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/build/amd2common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/build/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/build/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/build/mangleString.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/build/optimize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/build/pre-publish.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/build/preamble.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/build/rollup-plugin-ec-lang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/build/rollup-plugin-ec-remove-dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts-en.common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts-en.common.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts-en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts-en.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts-en.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts-en.simple.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts-en.simple.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts.common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts.common.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts.simple.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/echarts.simple.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/extension/bmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/extension/bmap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/extension/bmap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/extension/dataTool.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/extension/dataTool.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/dist/extension/dataTool.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/echarts.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/echarts.blank.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/echarts.common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/echarts.simple.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension-src/bmap/BMapCoordSys.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension-src/bmap/BMapModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension-src/bmap/BMapView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension-src/bmap/bmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension-src/dataTool/gexf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension-src/dataTool/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension-src/dataTool/prepareBoxplotData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension/bmap/BMapCoordSys.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension/bmap/BMapModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension/bmap/BMapView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension/bmap/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension/bmap/bmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension/dataTool/gexf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension/dataTool/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension/dataTool/prepareBoxplotData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension/dataTool/quantile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension/echarts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/extension/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/index.common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/index.simple.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/CoordinateSystem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/ExtensionAPI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/action/createDataSelectAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/action/geoRoam.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/action/roamHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/bar/BarSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/bar/BarView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/bar/BaseBarSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/bar/PictorialBarSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/bar/PictorialBarView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/bar/barItemStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/bar/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/boxplot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/boxplot/BoxplotSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/boxplot/BoxplotView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/boxplot/boxplotLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/boxplot/boxplotVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/candlestick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/candlestick/CandlestickSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/candlestick/CandlestickView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/candlestick/candlestickLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/candlestick/candlestickVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/candlestick/preprocessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/chord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/chord/ChordSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/chord/ChordView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/chord/Ribbon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/chord/chordCircularLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/effectScatter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/effectScatter/EffectScatterSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/effectScatter/EffectScatterView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/funnel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/funnel/FunnelSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/funnel/FunnelView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/funnel/funnelLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/gauge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/gauge/GaugeSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/gauge/GaugeView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/gauge/PointerPath.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/GraphSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/GraphView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/adjustEdge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/backwardCompat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/categoryFilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/categoryVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/circularLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/circularLayoutHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/createView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/edgeVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/forceHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/forceLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/graphAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/simpleLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/graph/simpleLayoutHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/heatmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/heatmap/HeatmapLayer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/heatmap/HeatmapSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/heatmap/HeatmapView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/EffectLine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/EffectPolyline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/EffectSymbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/LargeLineDraw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/LargeSymbolDraw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/Line.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/LineDraw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/LinePath.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/Polyline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/Symbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/SymbolDraw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/createGraphFromNodeEdge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/createGraphFromNodeMatrix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/createListFromArray.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/createListSimply.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/createRenderPlanner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/focusNodeAdjacencyAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/labelHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/treeHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/helper/whiskerBoxCommon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/line.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/line/LineSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/line/LineView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/line/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/line/lineAnimationDiff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/line/poly.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/lines.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/lines/LinesSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/lines/LinesView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/lines/linesLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/lines/linesVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/map/MapSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/map/MapView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/map/backwardCompat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/map/mapDataStatistic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/map/mapSymbolLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/map/mapVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/parallel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/parallel/ParallelSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/parallel/ParallelView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/parallel/parallelVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/pictorialBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/pie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/pie/PieSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/pie/PieView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/pie/labelLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/pie/pieLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/radar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/radar/RadarSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/radar/RadarView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/radar/backwardCompat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/radar/radarLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/sankey.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/sankey/SankeySeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/sankey/SankeyView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/sankey/sankeyAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/sankey/sankeyLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/sankey/sankeyVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/scatter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/scatter/ScatterSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/scatter/ScatterView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/sunburst.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/sunburst/SunburstPiece.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/sunburst/SunburstSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/sunburst/SunburstView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/sunburst/sunburstAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/sunburst/sunburstLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/themeRiver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/themeRiver/ThemeRiverSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/themeRiver/ThemeRiverView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/themeRiver/themeRiverLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/themeRiver/themeRiverVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/tree/TreeSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/tree/TreeView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/tree/layoutHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/tree/traversalHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/tree/treeAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/tree/treeLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/treemap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/treemap/Breadcrumb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/treemap/TreemapSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/treemap/TreemapView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/treemap/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/treemap/treemapAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/treemap/treemapLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/chart/treemap/treemapVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/angleAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axis/AngleAxisView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axis/AxisBuilder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axis/AxisView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axis/CartesianAxisView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axis/ParallelAxisView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axis/RadiusAxisView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axis/SingleAxisView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axis/parallelAxisAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axisPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axisPointer/AxisPointerModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axisPointer/AxisPointerView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axisPointer/BaseAxisPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axisPointer/CartesianAxisPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axisPointer/PolarAxisPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axisPointer/SingleAxisPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axisPointer/axisTrigger.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axisPointer/findPointFromSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axisPointer/globalListener.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axisPointer/modelHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/axisPointer/viewHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/brush.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/brush/BrushModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/brush/BrushView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/brush/brushAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/brush/preprocessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/brush/selector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/brush/visualEncoding.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/calendar/CalendarView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/AxisProxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/DataZoomModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/DataZoomView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/InsideZoomModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/InsideZoomView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/SelectZoomModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/SelectZoomView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/SliderZoomModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/SliderZoomView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/dataZoomAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/dataZoomProcessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/history.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/roams.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoom/typeDefaulter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoomInside.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataZoomSelect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/dataset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/geo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/geo/GeoView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/graphic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/gridSimple.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/helper/BrushController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/helper/BrushTargetManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/helper/MapDraw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/helper/RoamController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/helper/brushHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/helper/cursorHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/helper/interactionMutex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/helper/listComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/helper/roamHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/helper/selectableMixin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/helper/sliderMove.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/legend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/legend/LegendModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/legend/LegendView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/legend/ScrollableLegendModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/legend/ScrollableLegendView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/legend/legendAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/legend/legendFilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/legend/scrollableLegendAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/legendScroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/markArea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/markLine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/markPoint.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/marker/MarkAreaModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/marker/MarkAreaView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/marker/MarkLineModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/marker/MarkLineView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/marker/MarkPointModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/marker/MarkPointView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/marker/MarkerModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/marker/MarkerView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/marker/markerHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/parallel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/parallelAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/polar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/radar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/radar/RadarView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/radiusAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/singleAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/timeline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/timeline/SliderTimelineModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/timeline/SliderTimelineView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/timeline/TimelineAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/timeline/TimelineModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/timeline/TimelineView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/timeline/preprocessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/timeline/timelineAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/timeline/typeDefaulter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/title.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/toolbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/toolbox/ToolboxModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/toolbox/ToolboxView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/toolbox/feature/Brush.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/toolbox/feature/DataView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/toolbox/feature/DataZoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/toolbox/feature/MagicType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/toolbox/feature/Restore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/toolbox/feature/SaveAsImage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/toolbox/featureManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/tooltip/TooltipContent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/tooltip/TooltipContentManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/tooltip/TooltipModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/tooltip/TooltipRichContent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/tooltip/TooltipView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMap/ContinuousModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMap/ContinuousView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMap/PiecewiseModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMap/PiecewiseView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMap/VisualMapModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMap/VisualMapView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMap/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMap/preprocessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMap/typeDefaulter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMap/visualEncoding.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMap/visualMapAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMapContinuous.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/component/visualMapPiecewise.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/Axis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/View.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/axisDefault.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/axisHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/axisModelCommonMixin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/axisModelCreator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/axisTickLabelBuilder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/calendar/Calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/calendar/CalendarModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/calendar/prepareCustom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/cartesian/Axis2D.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/cartesian/AxisModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/cartesian/Cartesian.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/cartesian/Cartesian2D.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/cartesian/Grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/cartesian/GridModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/cartesian/cartesianAxisHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/cartesian/prepareCustom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/Geo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/GeoModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/Region.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/fix/diaoyuIsland.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/fix/geoCoord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/fix/nanhai.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/fix/textCoord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/geoCreator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/geoJSONLoader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/geoSVGLoader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/geoSourceManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/mapDataStorage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/parseGeoJson.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/geo/prepareCustom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/parallel/AxisModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/parallel/Parallel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/parallel/ParallelAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/parallel/ParallelModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/parallel/parallelCreator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/parallel/parallelPreprocessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/polar/AngleAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/polar/AxisModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/polar/Polar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/polar/PolarModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/polar/RadiusAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/polar/polarCreator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/polar/prepareCustom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/radar/IndicatorAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/radar/Radar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/radar/RadarModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/single/AxisModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/single/Single.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/single/SingleAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/single/prepareCustom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/single/singleAxisHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/coord/single/singleCreator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/DataDiffer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/Graph.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/List.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/OrdinalMeta.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/Source.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/Tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/helper/completeDimensions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/helper/createDimensions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/helper/dataProvider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/helper/dataStackHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/helper/dimensionHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/helper/linkList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/helper/sourceHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/data/helper/sourceType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/echarts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/export.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/lang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/langEN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/langFI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/langTH.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/layout/barGrid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/layout/barPolar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/layout/points.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/loading/default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/Component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/Global.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/Model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/OptionManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/Series.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/globalDefault.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/mixin/areaStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/mixin/boxLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/mixin/colorPalette.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/mixin/dataFormat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/mixin/itemStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/mixin/lineStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/mixin/makeStyleMapper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/mixin/textStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/model/referHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/preprocessor/backwardCompat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/preprocessor/helper/compatStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/processor/dataFilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/processor/dataSample.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/processor/dataStack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/scale/Interval.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/scale/Log.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/scale/Ordinal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/scale/Scale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/scale/Time.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/scale/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/stream/Scheduler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/stream/task.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/theme/dark.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/theme/light.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/KDTree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/animation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/clazz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/graphic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/nest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/number.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/quickSelect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/symbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/util/throttle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/view/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/view/Component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/visual/VisualMapping.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/visual/aria.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/visual/dataColor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/visual/seriesColor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/visual/symbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/visual/visualDefault.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/lib/visual/visualSolution.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/licenses/LICENSE-d3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/china-contour.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/china.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/anhui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/aomen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/beijing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/chongqing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/fujian.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/gansu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/guangdong.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/guangxi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/guizhou.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/hainan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/hebei.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/heilongjiang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/henan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/hubei.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/hunan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/jiangsu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/jiangxi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/jilin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/liaoning.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/neimenggu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/ningxia.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/qinghai.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/shandong.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/shanghai.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/shanxi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/shanxi1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/sichuan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/taiwan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/tianjin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/xianggang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/xinjiang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/xizang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/yunnan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/province/zhejiang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/js/world.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/china-cities.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/china-contour.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/china.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/anhui.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/aomen.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/beijing.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/chongqing.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/fujian.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/gansu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/guangdong.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/guangxi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/guizhou.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/hainan.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/hebei.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/heilongjiang.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/henan.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/hubei.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/hunan.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/jiangsu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/jiangxi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/jilin.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/liaoning.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/neimenggu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/ningxia.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/qinghai.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/shandong.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/shanghai.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/shanxi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/shanxi1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/sichuan.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/taiwan.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/tianjin.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/xianggang.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/xinjiang.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/xizang.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/yunnan.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/province/zhejiang.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/map/json/world.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/CoordinateSystem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/ExtensionAPI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/action/createDataSelectAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/action/geoRoam.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/action/roamHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/bar/BarSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/bar/BarView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/bar/BaseBarSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/bar/PictorialBarSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/bar/PictorialBarView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/bar/barItemStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/bar/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/boxplot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/boxplot/BoxplotSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/boxplot/BoxplotView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/boxplot/boxplotLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/boxplot/boxplotVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/candlestick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/candlestick/CandlestickSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/candlestick/CandlestickView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/candlestick/candlestickLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/candlestick/candlestickVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/candlestick/preprocessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/chord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/chord/ChordSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/chord/ChordView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/chord/Ribbon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/chord/chordCircularLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/effectScatter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/effectScatter/EffectScatterSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/effectScatter/EffectScatterView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/funnel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/funnel/FunnelSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/funnel/FunnelView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/funnel/funnelLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/gauge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/gauge/GaugeSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/gauge/GaugeView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/gauge/PointerPath.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/GraphSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/GraphView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/adjustEdge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/backwardCompat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/categoryFilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/categoryVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/circularLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/circularLayoutHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/createView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/edgeVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/forceHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/forceLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/graphAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/simpleLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/graph/simpleLayoutHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/heatmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/heatmap/HeatmapLayer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/heatmap/HeatmapSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/heatmap/HeatmapView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/EffectLine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/EffectPolyline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/EffectSymbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/LargeLineDraw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/LargeSymbolDraw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/Line.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/LineDraw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/LinePath.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/Polyline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/Symbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/SymbolDraw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/createGraphFromNodeEdge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/createGraphFromNodeMatrix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/createListFromArray.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/createListSimply.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/createRenderPlanner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/focusNodeAdjacencyAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/labelHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/treeHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/helper/whiskerBoxCommon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/line.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/line/LineSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/line/LineView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/line/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/line/lineAnimationDiff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/line/poly.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/lines.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/lines/LinesSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/lines/LinesView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/lines/linesLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/lines/linesVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/map/MapSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/map/MapView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/map/backwardCompat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/map/mapDataStatistic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/map/mapSymbolLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/map/mapVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/parallel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/parallel/ParallelSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/parallel/ParallelView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/parallel/parallelVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/pictorialBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/pie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/pie/PieSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/pie/PieView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/pie/labelLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/pie/pieLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/radar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/radar/RadarSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/radar/RadarView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/radar/backwardCompat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/radar/radarLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/sankey.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/sankey/SankeySeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/sankey/SankeyView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/sankey/sankeyAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/sankey/sankeyLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/sankey/sankeyVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/scatter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/scatter/ScatterSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/scatter/ScatterView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/sunburst.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/sunburst/SunburstPiece.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/sunburst/SunburstSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/sunburst/SunburstView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/sunburst/sunburstAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/sunburst/sunburstLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/themeRiver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/themeRiver/ThemeRiverSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/themeRiver/ThemeRiverView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/themeRiver/themeRiverLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/themeRiver/themeRiverVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/tree/TreeSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/tree/TreeView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/tree/layoutHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/tree/traversalHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/tree/treeAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/tree/treeLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/treemap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/treemap/Breadcrumb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/treemap/TreemapSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/treemap/TreemapView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/treemap/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/treemap/treemapAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/treemap/treemapLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/chart/treemap/treemapVisual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/angleAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axis/AngleAxisView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axis/AxisBuilder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axis/AxisView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axis/CartesianAxisView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axis/ParallelAxisView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axis/RadiusAxisView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axis/SingleAxisView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axis/parallelAxisAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer/AxisPointerModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer/AxisPointerView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer/BaseAxisPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer/CartesianAxisPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer/IAxisPointer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer/PolarAxisPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer/SingleAxisPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer/axisTrigger.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer/findPointFromSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer/globalListener.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer/modelHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/axisPointer/viewHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/brush.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/brush/BrushModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/brush/BrushView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/brush/brushAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/brush/preprocessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/brush/selector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/brush/visualEncoding.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/calendar/CalendarView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/AxisProxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/DataZoomModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/DataZoomView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/InsideZoomModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/InsideZoomView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/SelectZoomModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/SelectZoomView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/SliderZoomModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/SliderZoomView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/dataZoomAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/dataZoomProcessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/history.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/roams.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoom/typeDefaulter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoomInside.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataZoomSelect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/dataset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/geo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/geo/GeoView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/graphic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/gridSimple.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/helper/BrushController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/helper/BrushTargetManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/helper/MapDraw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/helper/RoamController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/helper/brushHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/helper/cursorHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/helper/interactionMutex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/helper/listComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/helper/roamHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/helper/selectableMixin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/helper/sliderMove.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/legend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/legend/LegendModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/legend/LegendView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/legend/ScrollableLegendModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/legend/ScrollableLegendView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/legend/legendAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/legend/legendFilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/legend/scrollableLegendAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/legendScroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/markArea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/markLine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/markPoint.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/marker/MarkAreaModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/marker/MarkAreaView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/marker/MarkLineModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/marker/MarkLineView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/marker/MarkPointModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/marker/MarkPointView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/marker/MarkerModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/marker/MarkerView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/marker/markerHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/parallel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/parallelAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/polar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/radar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/radar/RadarView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/radiusAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/singleAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/timeline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/timeline/SliderTimelineModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/timeline/SliderTimelineView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/timeline/TimelineAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/timeline/TimelineModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/timeline/TimelineView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/timeline/preprocessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/timeline/timelineAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/timeline/typeDefaulter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/title.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/toolbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/toolbox/ToolboxModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/toolbox/ToolboxView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/toolbox/feature/Brush.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/toolbox/feature/DataView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/toolbox/feature/DataZoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/toolbox/feature/MagicType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/toolbox/feature/Restore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/toolbox/feature/SaveAsImage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/toolbox/featureManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/tooltip/TooltipContent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/tooltip/TooltipContentManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/tooltip/TooltipModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/tooltip/TooltipRichContent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/tooltip/TooltipView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMap/ContinuousModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMap/ContinuousView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMap/PiecewiseModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMap/PiecewiseView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMap/VisualMapModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMap/VisualMapView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMap/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMap/preprocessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMap/typeDefaulter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMap/visualEncoding.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMap/visualMapAction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMapContinuous.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/component/visualMapPiecewise.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/Axis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/ICoordinateSystem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/View.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/axisDefault.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/axisHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/axisModelCommonMixin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/axisModelCreator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/axisTickLabelBuilder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/calendar/Calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/calendar/CalendarModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/calendar/prepareCustom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/cartesian/Axis2D.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/cartesian/AxisModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/cartesian/Cartesian.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/cartesian/Cartesian2D.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/cartesian/Grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/cartesian/GridModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/cartesian/cartesianAxisHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/cartesian/prepareCustom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/Geo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/GeoModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/Region.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/fix/diaoyuIsland.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/fix/geoCoord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/fix/nanhai.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/fix/textCoord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/geoCreator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/geoJSONLoader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/geoSVGLoader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/geoSourceManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/mapDataStorage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/parseGeoJson.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/geo/prepareCustom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/parallel/AxisModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/parallel/Parallel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/parallel/ParallelAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/parallel/ParallelModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/parallel/parallelCreator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/parallel/parallelPreprocessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/polar/AngleAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/polar/AxisModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/polar/Polar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/polar/PolarModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/polar/RadiusAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/polar/polarCreator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/polar/prepareCustom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/radar/IndicatorAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/radar/Radar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/radar/RadarModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/single/AxisModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/single/Single.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/single/SingleAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/single/prepareCustom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/single/singleAxisHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/coord/single/singleCreator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/DataDiffer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/Graph.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/List.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/OrdinalMeta.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/Source.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/Tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/helper/completeDimensions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/helper/createDimensions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/helper/dataProvider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/helper/dataStackHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/helper/dimensionHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/helper/linkList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/helper/sourceHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/data/helper/sourceType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/echarts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/export.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/lang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/langEN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/langFI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/langTH.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/layout/barGrid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/layout/barPolar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/layout/points.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/loading/default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/Component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/Global.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/Model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/OptionManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/Series.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/globalDefault.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/mixin/areaStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/mixin/boxLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/mixin/colorPalette.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/mixin/dataFormat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/mixin/itemStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/mixin/lineStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/mixin/makeStyleMapper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/mixin/textStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/model/referHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/preprocessor/backwardCompat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/preprocessor/helper/compatStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/processor/dataFilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/processor/dataSample.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/processor/dataStack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/scale/Interval.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/scale/Log.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/scale/Ordinal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/scale/Scale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/scale/Time.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/scale/helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/stream/Scheduler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/stream/task.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/theme/dark.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/theme/light.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/KDTree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/animation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/clazz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/graphic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/nest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/number.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/quickSelect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/symbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/util/throttle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/view/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/view/Component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/visual/VisualMapping.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/visual/aria.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/visual/dataColor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/visual/seriesColor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/visual/symbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/visual/visualDefault.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/src/visual/visualSolution.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/theme/dark.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/theme/infographic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/theme/macarons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/theme/roma.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/theme/shine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/echarts/theme/vintage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,19 +1001,19 @@
     <session id="1703450832">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="4" />
-          <entry key="project.open.time.13" value="3" />
+          <entry key="project.open.time.13" value="4" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -105,10 +1086,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/post.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
+            <state relative-caret-position="506">
               <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
@@ -117,11 +1098,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/func.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+            <state relative-caret-position="396">
+              <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -132,7 +1113,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/config_basic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
+            <state relative-caret-position="3542">
               <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="163" selection-end-column="11" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#3;n#div#1;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
@@ -144,8 +1125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1430">
-              <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+            <state relative-caret-position="66">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
               <folding>
                 <element signature="e#15#55#0" expanded="true" />
               </folding>
@@ -156,8 +1137,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/config_swj.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
+            <state relative-caret-position="1694">
+              <caret line="77" column="36" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -215,8 +1196,8 @@
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/config_swj.html" />
         <option value="$PROJECT_DIR$/config.json" />
-        <option value="$PROJECT_DIR$/func.py" />
         <option value="$PROJECT_DIR$/API/post.py" />
+        <option value="$PROJECT_DIR$/func.py" />
       </list>
     </option>
   </component>
@@ -226,14 +1207,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/static/echarts/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="430" />
-    <option name="y" value="85" />
+    <option name="x" value="497" />
+    <option name="y" value="154" />
     <option name="width" value="1532" />
     <option name="height" value="931" />
   </component>
@@ -376,10 +1352,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="430" y="85" width="1532" height="931" extended-state="0" />
+    <frame x="497" y="154" width="1532" height="931" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17191781" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17465754" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -509,13 +1485,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="58" lean-forward="true" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test.html" />
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -543,16 +1513,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hello.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hello.py" />
     <entry file="file://$PROJECT_DIR$/hello.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -573,16 +1534,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/change.py">
+    <entry file="file://$PROJECT_DIR$/change.py" />
+    <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state>
+          <caret column="104" lean-forward="true" selection-start-column="104" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/post.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/config_basic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
+        <state relative-caret-position="3542">
           <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="163" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#3;n#div#1;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
@@ -592,44 +1564,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1430">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="66">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding>
             <element signature="e#15#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="104" lean-forward="true" selection-start-column="104" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/config_swj.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
+        <state relative-caret-position="1694">
+          <caret line="77" column="36" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/post.py">
+    <entry file="file://$PROJECT_DIR$/func.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        <state relative-caret-position="396">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
