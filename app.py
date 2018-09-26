@@ -8,7 +8,6 @@ from API import post
 app = Flask(__name__)
 
 
-
 @app.route('/')
 def index():
     params = {'cpu':func.getCpuState(),'mem':func.getMemState(),'disk':func.getDiskState(), 'ip':func.get_ip(), 'netmask':func.get_netmask(),'sysruntime':func.get_stsruntime()}
@@ -80,16 +79,14 @@ def get_sysstatus():
 
 @app.route('/getAllConfig', methods=['POST'])
 def getAllConfig():
-    return json.dumps(func.readJson("config.json"));
-
-
-app.register_blueprint(post.bp)
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-app.config.from_object(config)
-app.config['JSON_AS_ASCII'] = False
+    return json.dumps(func.readJson("config.json"))
 
 
 if __name__ == '__main__':
+    app.register_blueprint(post.bp)
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+    app.config.from_object(config)
+    app.config['JSON_AS_ASCII'] = False
     app.run(host='0.0.0.0', port=app.config['PORT'])
 
 

@@ -159,7 +159,7 @@
 	$("#save").click(function () {
 	    var resolution = $("#resolution").val();
 	    var coltype = $("#coltype").val();
-		$.post('/reconfig_swj',{resolution:resolution, coltype:coltype},function(res){
+		$.post('/reconfig_video',{resolution:resolution, coltype:coltype},function(res){
 				
 		});
     });
