@@ -33,7 +33,8 @@ def config_network():
 
 @app.route('/config_swj')
 def config_swj():
-    return render_template('config_swj.html')
+    video_config = func.readJson('config.json')
+    return render_template('config_swj.html', params = video_config['swj'])
 
 
 @app.route('/sys_upd')

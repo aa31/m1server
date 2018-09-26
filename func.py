@@ -2,6 +2,7 @@ import psutil
 import time
 import math
 import json
+import os
 
 
 # 网络信息
@@ -98,5 +99,10 @@ def jsonInit():
     createJson('./static/json/videoParams.json', data)
 
 
-jsonInit()
+if os.path.isfile("config.json"):
+    pass
+else:
+    jsonInit()
+
+
 
