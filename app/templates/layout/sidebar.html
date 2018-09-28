@@ -1,0 +1,28 @@
+<!-- Sidebar menu-->
+<aside class="app-sidebar">
+	<ul class="app-menu">
+		<li>
+			<a class="app-menu__item active" href="{{view.index}}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">首页</span></a>
+		</li>
+		<li class="treeview">
+			<a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span
+				 class="app-menu__label">基本配置</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+			<ul class="treeview-menu">
+				<li><a class="treeview-item" href="ui-cards">网络配置</a></li>
+				<li><a class="treeview-item" href="{{ url_for('view.config_basic') }}">目标参数</a></li>
+			</ul>
+		</li>
+		<li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span
+				 class="app-menu__label">系统管理</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+			<ul class="treeview-menu">
+				<li><a class="treeview-item" href="form-components.html">密码修改</a></li>
+				<li><a class="treeview-item" href="form-components.html">运行日志</a></li>
+				<li><a class="treeview-item" href="form-components.html">重启</a></li>
+				<li><a class="treeview-item" href="form-components.html">软件升级</a></li>
+				<li><a class="treeview-item" href="form-components.html">系统时间</a></li>
+			</ul>
+		</li>
+		<li><a class="app-menu__item" href="charts.html"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">无线设置</span></a></li>
+		<li><a class="app-menu__item" href="index.html"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">退出</span></a></li>
+	</ul>
+</aside>

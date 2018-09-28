@@ -1,0 +1,405 @@
+{% extends "layout/base.html" %}
+{% block head %}
+
+{% block title %}{% endblock %} 
+
+<style type="text/css">
+	/*.embed-responsive{
+		float: left;
+	}*/
+
+	.a_titl{
+		position: relative;
+		background-color: #fff !important;
+		border-radius: 3px;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+		margin-bottom: 30px;
+	}
+	.a_titl_head{
+		background-color: #242424;
+		color: #fff;
+		padding-left:1em ;
+		padding-right: 1em;
+		line-height: 2.5em;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+	}
+	.a_titl_body{
+		padding: 1em;
+		font-size: 1.1em;
+		position: relative;
+	}
+	.a_charts_text{
+		position: absolute;top: 50%;left: 50%;
+		transform: translate(-50%,-50%);
+		color: #17A2B8;
+		font-size: 1.2em;
+	}
+	
+	.a_chart_div{
+		width: 100%;height: 13rem;
+	}
+
+</style>
+{% endblock %}
+
+{% block main %}
+
+
+<main class="app-content">
+
+	<div class="app-title">
+		<div class="col-md-6">
+			<h1> <i class="fa fa-home fa-lg"></i> </h1>
+		</div>
+		<div class="col-md-6">
+			<!--<div style="float:right;font-size: 1em;text-align: right;color: red;">试用版本,有效期:2018年9月28日</div>-->
+		</div>
+	</div>
+
+
+	<div class="col-md-10" style="margin: 0 auto;">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="a_titl">
+					<div class="a_titl_head">CPU</div>
+					<div class="a_titl_body">
+						<div class="a_chart_div" id="c_cpu">
+						</div>
+						<div class="a_charts_text">{{  params.cpu  }} %</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="a_titl">
+					<div class="a_titl_head">内存</div>
+					<div class="a_titl_body">
+						<div class="a_chart_div" id="c_mem">
+						</div>
+						<div class="a_charts_text">{{  params.mem  }} %</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="a_titl">
+					<div class="a_titl_head">磁盘</div>
+					<div class="a_titl_body">
+						<div class="a_chart_div" id="c_disk">
+						</div>
+						<div class="a_charts_text">{{  params.disk  }} %</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-sm-6 col-lg-4">
+				<div class="a_titl">
+					<div class="a_titl_head">系统信息</div>
+					<div class="a_titl_body">
+						<label class="control-label a_label">设备名称：</label>
+						<span>动态识别追踪设备M1</span>
+						<br />
+						<label class="control-label a_label">软件版本：</label>
+						<span>V1.0</span>
+						<br />
+						<label class="control-label a_label">系统时间：</label>
+						<span id="systime"></span>
+						<br />
+						<label class="control-label a_label">运行时间：</label>
+						<span id="sysruntime"></span>
+						&#12288;&#12288;<br />
+						&#12288;&#12288;<br />
+						&#12288;&#12288;<br />
+						&#12288;&#12288;<br />
+						&#12288;&#12288;<br />
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-sm-6 col-lg-4">
+				<div class="a_titl">
+					<div class="a_titl_head">网络信息</div>
+					<div class="a_titl_body">
+						<label class="control-label a_label">联网方式：</label>
+						<span>动态ip</span>
+						<br />
+						<label class="control-label a_label">ip地址&#12288;：</label>
+						<span>{{  params.ip  }}</span>
+						<br />
+						<label class="control-label a_label">端口&#12288;&#12288;：</label>
+						<span>9909</span>
+						<br />
+						<label class="control-label a_label">子网掩码：</label>
+						<span>192.168.1.1</span>
+						<br />
+						<label class="control-label a_label">网关&#12288;&#12288;：</label>
+						<span>{{  params.netmask  }}</span>
+						<br />
+						<label class="control-label a_label">主DNS&#12288;：</label>
+						<span>255.0.0.0</span>
+						<br />
+						<label class="control-label a_label">次DNS&#12288;：</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-sm-6 col-lg-4">
+				<div class="a_titl">
+					<div class="a_titl_head">账号信息</div>
+					<div class="a_titl_body">
+						<label class="control-label a_label">用户名：</label>
+						<span>boerziman</span>
+						<br />
+						<label class="control-label a_label">密码&#12288;：</label>
+						<span>123456</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+
+	</div>  <!--12-->
+	</div>  <!--row-->
+
+</main>
+{% endblock %}
+
+
+{% block js %}
+
+<script src=" {{ url_for('static', filename='js/echarts-en.js') }}"></script>
+<script type="text/javascript">
+    function getSystime(){
+        var time,year,month,date,hours,minutes,seconds;
+        time = new Date();
+        year = time.getFullYear();
+        //以下是通过三元运算对日期进行处理,小于10的数在前面加上0
+        month = (time.getMonth()+1)<10?("0"+(time.getMonth()+1)):(time.getMonth()+1);
+        date = time.getDate()<10?("0"+time.getDate()):time.getDate();
+        hours = time.getHours()<10?("0"+time.getHours()):time.getHours();
+        minutes = (time.getMinutes()<10?("0"+time.getMinutes()):time.getMinutes());
+        seconds = (time.getSeconds()<10?("0"+time.getSeconds()):time.getSeconds());
+        //下面操作可以拼成自己想要的日期格式，如：2018-01-15 14:32:57
+        time = year+"-"+month+"-"+date+" "+hours+":"+minutes+":"+seconds;
+        return time;
+    }
+    // 当前系统时间
+    setInterval(function(){
+        $('#systime').text(getSystime());
+    },1000);
+
+    function SecondToDate(msd) {
+        var time =msd
+        if (null != time && "" != time) {
+            if (time > 60 && time < 60 * 60) {
+                time = parseInt(time / 60.0) + "分钟" + parseInt((parseFloat(time / 60.0) -
+                    parseInt(time / 60.0)) * 60) + "秒";
+            }
+            else if (time >= 60 * 60 && time < 60 * 60 * 24) {
+                time = parseInt(time / 3600.0) + "小时" + parseInt((parseFloat(time / 3600.0) -
+                    parseInt(time / 3600.0)) * 60) + "分钟" +
+                    parseInt((parseFloat((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60) -
+                    parseInt((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60)) * 60) + "秒";
+            } else if (time >= 60 * 60 * 24) {
+                time = parseInt(time / 3600.0/24) + "天" +parseInt((parseFloat(time / 3600.0/24)-
+                    parseInt(time / 3600.0/24))*24) + "小时" + parseInt((parseFloat(time / 3600.0) -
+                    parseInt(time / 3600.0)) * 60) + "分钟" +
+                    parseInt((parseFloat((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60) -
+                    parseInt((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60)) * 60) + "秒";
+            }
+            else {
+                time = parseInt(time) + "秒";
+            }
+        }
+        return time;
+    }
+    var sysruntime = '{{  params.sysruntime  }}';
+    
+	setInterval(function(){
+		sysruntime++;
+        $('#sysruntime').text(SecondToDate(sysruntime));
+    },1000);
+
+</script>
+
+<script type="text/javascript">
+    $().ready(function(){
+    	
+//  	setTimeout(function(){
+//  		myChart.setOption({
+//		        series: [{
+//		            data:[
+//		                {value:60, name:'已使用'},
+//		                {value:40, name:'未使用'},
+//		            ]
+//		        }]
+//	    	});
+//  	},3000)
+    	
+    	function initChatrs(cpustate,memstate,diskstate){
+    		cpu = echarts.init(document.getElementById('c_cpu'));
+    		mem = echarts.init(document.getElementById('c_mem'));
+    		disk = echarts.init(document.getElementById('c_disk'));
+    		var cpuOption = {
+			    // 全局调色盘。
+	    		color: ['#17A2B8','#E5E5E5'],
+			    series: [
+			        {
+			            name:'cpu使用率',
+			            type:'pie',
+			            radius: ['50%', '60%'],
+			            avoidLabelOverlap: false,
+			            label: {
+			                normal: {
+			                    show: false,
+			                    position: 'center'
+			                },
+			                emphasis: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: '16',
+			                        fontWeight: 'bold'
+			                    }
+			                }
+			            },
+			            labelLine: {
+			                normal: {
+			                    show: false
+			                }
+			            },
+			            data:[
+			                {value:cpustate, name:''},
+			                {value:100-cpustate, name:''},
+			            ]
+			        }
+			    ]
+			};
+			var memOption = {
+			    // 全局调色盘。
+	    		color: ['#17A2B8','#E5E5E5'],
+			    series: [
+			        {
+			            name:'内存使用率',
+			            type:'pie',
+			            radius: ['50%', '60%'],
+			            avoidLabelOverlap: false,
+			            label: {
+			                normal: {
+			                    show: false,
+			                    position: 'center'
+			                },
+			                emphasis: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: '16',
+			                        fontWeight: 'bold'
+			                    }
+			                }
+			            },
+			            labelLine: {
+			                normal: {
+			                    show: false
+			                }
+			            },
+			            data:[
+			                {value:memstate, name:'已使用'},
+			                {value:100-memstate, name:'未使用'},
+			            ]
+			        }
+			    ]
+			};
+			var diskOption = {
+			    // 全局调色盘。
+	    		color: ['#17A2B8','#E5E5E5'],
+			    series: [
+			        {
+			            name:'硬盘使用率',
+			            type:'pie',
+			            radius: ['50%', '60%'],
+			            avoidLabelOverlap: false,
+			            label: {
+			                normal: {
+			                    show: false,
+			                    position: 'center'
+			                },
+			                emphasis: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: '16',
+			                        fontWeight: 'bold'
+			                    }
+			                }
+			            },
+			            labelLine: {
+			                normal: {
+			                    show: false
+			                }
+			            },
+			            data:[
+			                {value:diskstate, name:'已使用'},
+			                {value:100-diskstate, name:'未使用'},
+			            ]
+			        }
+			    ]
+			};
+    		cpu.setOption(cpuOption);
+    		mem.setOption(memOption);
+    		disk.setOption(diskOption);
+    	}
+    	
+		initChatrs({{  params.cpu  }},{{  params.mem  }},{{  params.disk  }});    	
+    	
+    	function reCharts(cpustate,memstate,diskstate){
+    		cpu.setOption({
+		        series: [{
+		            data:[
+		                {value:cpustate, name:''},
+		                {value:100-cpustate, name:''},
+		            ]
+	        	}]
+	    	});
+	    	mem.setOption({
+		        series: [{
+		            data:[
+		                {value:memstate, name:''},
+		                {value:100-memstate, name:''},
+		            ]
+	        	}]
+	    	});
+	    	disk.setOption({
+		        series: [{
+		            data:[
+		                {value:diskstate, name:''},
+		                {value:100-diskstate, name:''},
+		            ]
+	        	}]
+	    	});
+	    	$arr = $('.a_charts_text');
+	    	$($arr[0]).text(cpustate+" %");
+	    	$($arr[1]).text(memstate+" %");
+	    	$($arr[2]).text(diskstate+" %");
+	    	
+    	}
+		
+		i=0;
+    	var intervar1 = setInterval(function(){
+			$.post('/get_sysstatus',function(res){
+				var jsonObj = JSON.parse(res);
+				reCharts(jsonObj.cpu,jsonObj.mem,jsonObj.disk);
+			});
+			i++;
+			if(i==2000000){
+				location.reload();
+			}
+		},3000);
+
+
+    })
+
+</script>
+
+{% endblock %}
+
+
+
