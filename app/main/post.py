@@ -3,7 +3,7 @@ import json, hashlib
 from app import utils
 from app.models import User
 from io import StringIO
-import xlwt
+import xlwt, os
 
 post_bp = Blueprint('post', __name__)
 
@@ -86,6 +86,12 @@ def downExcel():
     # response = make_response(send_file(wb))
     # response.headers["Content-Disposition"] = "attachment; filename=views.xls;"
     return wb
+
+
+@post_bp.route("/reboot", methods=['GET'])
+def reboot():
+    os.system('sh ../sh/reboot.sh')
+    return "{}"
 
 
 def getApi(code, content, msg):

@@ -45,6 +45,10 @@
         				</div>
         				
         				<img id="videoImg" style="width: 100%;" src="http://127.0.0.1:5000/video_feed"/>
+						<div class="a_display_none" id="defaultVideo" style="font-size: 3em;width: 100%;text-align: center;padding: 4.65em 0;color: #fff;background: #E5E5E5 !important;">
+							实时视频关闭
+						</div>
+
         			</div>
         	
     				<div class="col-md-4 col-sm-11 col-xs-12">
@@ -169,9 +173,11 @@
 		if(isChecked==1){
 			$(this).attr('data-ischecked',0);
 			$('#videoImg').css('display','none');
+			$("#defaultVideo").removeClass('a_display_none');
 		}else{
 			$(this).attr('data-ischecked',1);
 			$('#videoImg').css('display','block');
+			$("#defaultVideo").addClass('a_display_none');
 		}
 	});
 	

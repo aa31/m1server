@@ -106,12 +106,11 @@
 						<br />
 						<label class="control-label a_label">运行时间：</label>
 						<span id="sysruntime"></span>
-						&#12288;&#12288;<br />
-						&#12288;&#12288;<br />
-						&#12288;&#12288;<br />
-						&#12288;&#12288;<br />
-						&#12288;&#12288;<br />
-						
+						&emsp;&emsp;<br />
+						&emsp;&emsp;<br />
+						&emsp;&emsp;<br />
+						&emsp;&emsp;<br />
+						&emsp;&emsp;<br />
 					</div>
 				</div>
 			</div>
@@ -151,7 +150,14 @@
 						<span>boerziman</span>
 						<br />
 						<label class="control-label a_label">密码&#12288;：</label>
+						<span>123456</span><br>
+						<label class="control-label a_label">最后登录时间：</label>
 						<span>123456</span>
+						&emsp;&emsp;<br />
+						&emsp;&emsp;<br />
+						&emsp;&emsp;<br />
+						&emsp;&emsp;<br />
+						&emsp;&emsp;<br />&emsp;&emsp;<br />
 					</div>
 				</div>
 			</div>
@@ -225,17 +231,6 @@
 
 <script type="text/javascript">
     $().ready(function(){
-    	
-//  	setTimeout(function(){
-//  		myChart.setOption({
-//		        series: [{
-//		            data:[
-//		                {value:60, name:'已使用'},
-//		                {value:40, name:'未使用'},
-//		            ]
-//		        }]
-//	    	});
-//  	},3000)
     	
     	function initChatrs(cpustate,memstate,diskstate){
     		cpu = echarts.init(document.getElementById('c_cpu'));
@@ -384,7 +379,7 @@
 		
 		i=0;
     	var intervar1 = setInterval(function(){
-			$.post('/get_sysstatus',function(res){
+			$.post('/post/get_sysstatus',function(res){
 				var jsonObj = JSON.parse(res);
 				reCharts(jsonObj.cpu,jsonObj.mem,jsonObj.disk);
 			});
