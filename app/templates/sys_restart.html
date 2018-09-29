@@ -34,7 +34,7 @@
     		<div class="col-md-12">
     			<div>
     				<label class="control-label a_label">重启系统：</label>
-    				<a href="{{url_for("post.reboot")}}" class="btn btn-info btn-sm">重启系统</a>
+    				<button id="restartBtn" class="btn btn-info btn-sm">重启系统</button>
 					<div class="a_tips">重启设备将断开当前所有连接，过程约1分钟</div>
     			</div>
     			
@@ -122,7 +122,33 @@
     	</div>
     </div>
     </main>
+		
 {% endblock %}
+
+
+{% block js %}
+		<script type="text/javascript">
+			$(function(){
+				
+				
+				console.log("s");
+				
+			$("#restartBtn").click(function(){
+// 					alert("正在重启");
+// 					jQuery.ajaxSetup ({cache:false});
+// 					var sec = Math.round(Math.random());
+// 					setTimeout(function(){
+// 						alert("重启成功");
+// 					},sec*1000)
+					
+			})
+			
+			
+
+			
+		})
+	</script>
+	{% endblock %}
 
 
 
