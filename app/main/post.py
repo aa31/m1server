@@ -2,7 +2,6 @@ from flask import Blueprint, request, make_response, jsonify, Response, session,
 import json, hashlib
 from app import utils
 from app.models import User
-from io import StringIO
 import xlwt, os
 
 post_bp = Blueprint('post', __name__)
@@ -11,19 +10,19 @@ post_bp = Blueprint('post', __name__)
 @post_bp.route('/reconfig_video', methods=['GET','POST'])
 def reconfig_video():
     # print(request.values )
-    jsonData = utils.readJson('config.json')
+    jsonData = utils.readJson('./app/config.json')
     reqJson = request.form
     if reqJson['resolution']:
         jsonData['video']['resolution'] = reqJson['resolution']
     if reqJson['resolution']:
         jsonData['video']['coltype'] = reqJson['coltype']
-    utils.createJson('config.json', jsonData)
+    utils.createJson('./app/config.json', jsonData)
     return json.dumps(jsonData)
 
 
 @post_bp.route('/reconfig_swj', methods=['GET','POST'])
 def reconfig_swj():
-    jsonData = utils.readJson('config.json')
+    jsonData = utils.readJson('./app/config.json')
     reqJson = request.form
     if reqJson['ip']:
         jsonData['swj']['ip'] = reqJson['ip']
@@ -34,8 +33,32 @@ def reconfig_swj():
     if reqJson['rtsp']:
         jsonData['swj']['rtsp'] = reqJson['rtsp']
     pass
-    utils.createJson('config.json', jsonData)
+    utils.createJson('./app/config.json', jsonData)
     return json.dumps(jsonData)
+
+
+# 修改网络信息
+@post_bp.route('/reconfig_network', methods=['POST'])
+def reconfig_network():
+    try:
+        jsonData = utils.readJson('./app/config.json')
+        reqJson = request.form
+        if reqJson['ip']:
+            jsonData['network']['ip'] = reqJson['ip']
+        if reqJson['port']:
+            jsonData['network']['port'] = reqJson['port']
+        if reqJson['netmask']:
+            jsonData['network']['netmask'] = reqJson['netmask']
+        if reqJson['gw']:
+            jsonData['network']['gw'] = reqJson['gw']
+        utils.createJson('./app/config.json', jsonData)
+        ip = reqJson['ip']
+        netmask = reqJson['netmask']
+        gw = reqJson['gw']
+        os.system('sh ./app/sh/changenetwork.sh ' + ip + ' ' + netmask + ' ' + gw)
+        return getApi(101, None, "ok")
+    except:
+        return getApi(102,None,"error")
 
 
 @post_bp.route('/get_sysstatus', methods=['POST'])
@@ -46,7 +69,7 @@ def get_sysstatus():
 
 @post_bp.route('/getAllConfig', methods=['POST'])
 def getAllConfig():
-    return json.dumps(utils.readJson("config.json"))
+    return json.dumps(utils.readJson("./app/config.json"))
 
 
 @post_bp.route('/login', methods=['POST'])
@@ -94,6 +117,7 @@ def reboot():
     return "{}"
 
 
+# 更改网络信息 ip netmask gw
 @post_bp.route("/changenetwork/", methods=['GET'])
 def changenetwork():
     ip = "192.168.80.101"

@@ -20,13 +20,14 @@ def login():
 @view_bp.route('/config_basic')
 def config_basic():
     params = utils.readJson('./app/static/json/videoParams.json')
-    video_config = utils.readJson('config.json')
+    video_config = utils.readJson('./app/config.json')
     return render_template('config_basic.html', params=params, video_config=video_config)
 
 
 @view_bp.route('/config_network/')
 def config_network():
-    return render_template('config_network.html')
+    config = utils.readJson('./app/config.json')
+    return render_template('config_network.html', params = config['network'])
 
 
 @view_bp.route('/config_swj')

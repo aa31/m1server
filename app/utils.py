@@ -88,10 +88,13 @@ def readJson(filename):
 
 
 def jsonInit():
+    # config.json
     video = {"resolution": "2", "coltype": "0", "target":"0,1"}
     swj = {"ip": "", "port": "", "rtsp": ""}
-    data = {"video": video, "swj": swj}
+    network = {'ip': get_ip(), 'netmask': get_netmask(),'port':'9909', 'type': '1', 'gw': ''}
+    data = {"video": video, "swj": swj, "network":network}
     createJson('./app/config.json', data)
+    # videoParams.json
     resolution = {'0': "800*600", '1': "1024*768", '2': "1920*1080"}
     coltype = {'0': "每帧采样", '1': "隔帧采样"}
     target = {'0': "四旋翼无人机", '1': "固定翼无人机",'2':'气球', '3':"风筝","4":"人","5":"车"}
@@ -99,10 +102,10 @@ def jsonInit():
     createJson('./app/static/json/videoParams.json', data)
 
 
-# if os.path.isfile("config.json"):
-#     pass
-# else:
-#     jsonInit()
+if os.path.isfile("config.json"):
+    pass
+else:
+    jsonInit()
 
 
 

@@ -21,7 +21,7 @@
 
 	<div class="app-title">
 		<div>
-			<h1>网络信息</h1>
+			<h1>网络信息{{params}}</h1>
 			<!--<p>Start a beautiful journey here</p>-->
 		</div>
 	</div>
@@ -49,21 +49,27 @@
 		                  </div>
 					</div>
 					<div class="row a_row_item">
+						<label class="control-label col-md-3 a_label2 ">ip&emsp;&emsp;&emsp;：</label>
+		                  <div class="col-md-6">
+			                    <input id="ip" class="form-control " type="text " placeholder=" " value="{{params.ip}} ">
+		                  </div>
+					</div>
+					<div class="row a_row_item">
 						<label class="control-label col-md-3 a_label2 ">端口&emsp;&emsp;：</label>
 		                  <div class="col-md-6">
-			                    <input class="form-control " type="text " placeholder=" " value="8000 ">
+			                    <input id="port" class="form-control " type="text " placeholder=" " value="{{params.port}} ">
 		                  </div>
 					</div>
 					<div class="row a_row_item">
 						<label class="control-label col-md-3 a_label2 ">子网掩码：</label>
 		                  <div class="col-md-6">
-			                    <input class="form-control " type="text " placeholder=" " value="255.255.255.0 ">
+			                    <input id="netmask" class="form-control " type="text " placeholder=" " value="{{params.netmask}} ">
 		                  </div>
 					</div>
 					<div class="row a_row_item">
 						<label class="control-label col-md-3 a_label2 ">网关&emsp;&emsp;：</label>
 		                  <div class="col-md-6">
-			                    <input class="form-control " type="text " placeholder=" " value="192.168.1.1 ">
+			                    <input id="gw" class="form-control " type="text " placeholder=" " value="{{params.gw}} ">
 		                  </div>
 					</div>
 					<div class="row a_row_item">
@@ -85,7 +91,7 @@
 			<div class="col-md-12">
 				<hr>
 				<div style="margin: 3em auto 1em auto;width: 100%;text-align: center;">
-					<input class="btn btn-info" type="submit" value="确定"/>
+					<input id="save" class="btn btn-info" type="button" value="确定"/>
 					
 					<a href="{{  url_for('post.changenetwork')  }}">确定</a>
 					
@@ -95,75 +101,6 @@
 			
 		</div>
 		
-		<!--
-        	作者：offline
-        	时间：2018-09-21
-        	描述：
-        
-		
-		<div class="row">
-			<div class="tile col-md-6">
-				<div class="a_title" ">网络信息</div>
-    			<!--<form class="form-horizontal ">
-	                <div class="form-group row ">
-	                  <label class="control-label col-md-3 a_label2 ">联网方式：</label>
-	                  <div class="col-md-9 ">
-	                    <div class="form-check ">
-	                      <label class="form-check-label ">
-	                        <input class="form-check-input" type="radio " name="gender ">动态ip
-	                      </label>
-	                      <label class="form-check-label" style="margin-left: 6em; ">
-	                        <input class="form-check-input" type="radio " name="gender ">静态ip
-	                      </label>
-	                    </div>
-	                  </div>
-	                </div>
-	                
-	                <div class="form-group row ">
-	                  <label class="control-label col-md-3 a_label2 ">端口：</label>
-	                  <div class="col-md-6 ">
-	                    <input class="form-control " type="text " placeholder=" " value="8000 ">
-	                  </div>
-	                </div>
-	                
-	                <div class="form-group row ">
-	                  <label class="control-label col-md-3 a_label2 ">子网掩码：</label>
-	                  <div class="col-md-6 ">
-	                    <input class="form-control " type="text " placeholder=" " value="255.255.255.0 ">
-	                  </div>
-	                </div>
-	                
-	                <div class="form-group row ">
-	                  <label class="control-label col-md-3 a_label2 ">网关：</label>
-	                  <div class="col-md-6 ">
-	                    <input class="form-control " type="text " placeholder=" " value="192.168.1.1 ">
-	                  </div>
-	                </div>
-	                
-	                <div class="form-group row ">
-	                  <label class="control-label col-md-3 a_label2 ">主DNS：</label>
-	                  <div class="col-md-6 ">
-	                    <input class="form-control " type="text " placeholder=" " value="192.168.1.1 ">
-	                  </div>
-	                </div>
-	                
-	                <div class="form-group row ">
-	                  <label class="control-label col-md-3 a_label2 ">次DNS：</label>
-	                  <div class="col-md-6 ">
-	                    <input class="form-control " type="text " placeholder=" " value="0.0.0.0 ">
-	                  </div>
-	                  <div class="col-md-2 ">非必填</div>
-	                </div>
-	                
-	                <div class="center-block ">
-	                	<button class="btn btn-info ">确定</button>
-	                	<button class="btn ">取消</button>
-	                </div>
-          		</form>-->
-    	
-    	
-    	
-    	
     </div>
     </main>
 {% endblock %}
@@ -174,5 +111,21 @@
 <script src=" {{ url_for( 'static', filename='vali-admin/docs/js/popper.min.js' ) }} "></script>
 <script src=" {{ url_for( 'static', filename='vali-admin/docs/js/plugins/pace.min.js' ) }} "></script>
 <script src=" {{ url_for( 'static', filename='vali-admin/docs/js/plugins/chart.js' ) }} "></script>
-
+<script type="text/javascript">
+	$("#save").click(function(){
+		var ip = $("#ip").val();
+		var netmask = $("#netmask").val();
+		var port = $("#port").val();
+		var gw = $("#gw").val();
+		$.post('/post/reconfig_network',{ip:ip, netmask:netmask, port:port, gw:gw},function(res){
+			console.log(res);
+			if(res.code==101){
+				alert('修改成功');
+			}else{
+			    alert('修改失败');
+			}
+		})
+	})
+</script>
 {% endblock %}
+

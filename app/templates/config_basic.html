@@ -44,7 +44,8 @@
 			                </div>
         				</div>
         				
-        				<img id="videoImg" style="width: 100%;" src="http://127.0.0.1:5000/video_feed"/>
+        				<!--<img id="videoImg" style="width: 100%;" src=""/>-->
+						<img id="videoImg" style="width: 100%;" src="http://127.0.0.1:5000/video_feed"/>
 						<div class="a_display_none" id="defaultVideo" style="font-size: 3em;width: 100%;text-align: center;padding: 4.65em 0;color: #fff;background: #E5E5E5 !important;">
 							实时视频关闭
 						</div>
@@ -139,7 +140,7 @@
 
 
 <script type="text/javascript">
-
+window.onerror=function(){return true;}
 	function fullScreen(){
 		$('#video').removeClass('col-md-8');
 		$('#video').addClass('col-md-12');
@@ -220,26 +221,25 @@
 	},3000);
 
 
-	$(function(){
-		i2=0;
-		setInterval(function(){
-			i2++;
-			$.ajax({
-			   // url: 'http://192.168.0.102:5000/fps',
-				url: 'http://127.0.0.1:5000/fps',
-			   dataType: "jsonp",
-			   jsonp: "callback",
-			   jsonpCallback:"callback",
-			   data:'callback=?',
-			   success: function (res) {
-			       $('#fps').text(res);
-			   }
-			});
-			if(i2==2000000){
-				location.reload();
-			}
-		},2000);
-	});
+	// $(function(){
+	// 	i2=0;
+	// 	setInterval(function(){
+	// 		i2++;
+	// 		$.ajax({
+	// 			url: 'http://127.0.0.1:5000/fps',
+	// 		   dataType: "jsonp",
+	// 		   jsonp: "callback",
+	// 		   jsonpCallback:"callback",
+	// 		   data:'callback=?',
+	// 		   success: function (res) {
+	// 		       $('#fps').text(res);
+	// 		   }
+	// 		});
+	// 		if(i2==2000000){
+	// 			location.reload();
+	// 		}
+	// 	},2000);
+	// });
 	
 	
 </script>
