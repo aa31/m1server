@@ -99,7 +99,8 @@ def changenetwork():
     arg1 = "192.168.80.101"
     arg2 = "255.255.255.0"
     arg3 = '192.168.1.1'
-    os.system('sh ./app/sh/changenetwork.sh ' + arg1 + ' ' + arg2 + ' ' + arg3)
+    str = os.popen('sh ./app/sh/changenetwork.sh ' + arg1 + ' ' + arg2 + ' ' + arg3)
+    print(str)
     return "{}"
 
 
