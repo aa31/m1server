@@ -113,7 +113,7 @@ def downExcel():
 
 @post_bp.route("/reboot", methods=['GET'])
 def reboot():
-    os.system('sh ../sh/reboot.sh')
+    os.system('reboot')
     return "{}"
 
 
