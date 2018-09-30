@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template, session, redirect, url_for
 from app import utils
 from app.models import User
-import pynetlinux
 
 view_bp = Blueprint('view', __name__)
 
@@ -74,13 +73,6 @@ def bf_request():
     else:
         pass
         # return redirect(url_for("view.login"))
-
-
-@view_bp.test
-def test():
-    iff = pynetlinux.ifconfig
-    print()
-    return {iff}
 
 
 # @view_bp.context_processor

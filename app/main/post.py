@@ -94,6 +94,11 @@ def reboot():
     return "{}"
 
 
+@post_bp.route("/changenetwork/", methods=['GET'])
+def changenetwork():
+    os.system('sh ../sh/changenetwork.sh' + arg0 + ' ' + arg1)
+    return "{}"
+
 def getApi(code, content, msg):
     data = {'code':code, "data":content, "msg": msg}
     return jsonify(data)
