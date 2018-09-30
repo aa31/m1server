@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d8d10ec-6691-4a58-933f-db0655cd0586" name="Default Changelist" comment="" />
+    <list default="true" id="9d8d10ec-6691-4a58-933f-db0655cd0586" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/main/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/post.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,9 +109,9 @@
               <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
               <folding>
                 <element signature="e#0#90#0" expanded="true" />
-                <marker date="1538273733691" expanded="true" signature="2264:2866" ph="..." />
-                <marker date="1538273733691" expanded="true" signature="2659:2866" ph="..." />
-                <marker date="1538273733691" expanded="true" signature="2991:2992" ph="..." />
+                <marker date="1538274151021" expanded="true" signature="2264:2866" ph="..." />
+                <marker date="1538274151021" expanded="true" signature="2659:2866" ph="..." />
+                <marker date="1538274151021" expanded="true" signature="2991:2992" ph="..." />
               </folding>
             </state>
           </provider>
@@ -367,10 +369,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="493" y="72" width="1825" height="859" extended-state="0" />
-    <editor active="true" />
+    <frame x="493" y="72" width="1825" height="859" extended-state="1" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16486023" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16486023" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -381,7 +382,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32925472" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3448276" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49736148" visible="true" weight="0.17806268" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49736148" visible="true" weight="0.17806268" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32925472" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026385" side_tool="true" weight="0.2616137" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -712,9 +713,9 @@
           <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
           <folding>
             <element signature="e#0#90#0" expanded="true" />
-            <marker date="1538273733691" expanded="true" signature="2264:2866" ph="..." />
-            <marker date="1538273733691" expanded="true" signature="2659:2866" ph="..." />
-            <marker date="1538273733691" expanded="true" signature="2991:2992" ph="..." />
+            <marker date="1538274151021" expanded="true" signature="2264:2866" ph="..." />
+            <marker date="1538274151021" expanded="true" signature="2659:2866" ph="..." />
+            <marker date="1538274151021" expanded="true" signature="2991:2992" ph="..." />
           </folding>
         </state>
       </provider>
