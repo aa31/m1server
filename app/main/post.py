@@ -96,11 +96,12 @@ def reboot():
 
 @post_bp.route("/changenetwork/", methods=['GET'])
 def changenetwork():
-	arg1 = "192.168.80.101"
-	arg2 = "255.255.255.0"
-	arg3 = "192.168.1.1"
+    arg1 = "192.168.80.101"
+    arg2 = "255.255.255.0"
+    arg3 = '192.168.1.1'
     os.system('sh ../sh/changenetwork.sh ' + arg1 + ' ' + arg2 + ' ' + arg3)
     return "{}"
+
 
 def getApi(code, content, msg):
     data = {'code':code, "data":content, "msg": msg}
