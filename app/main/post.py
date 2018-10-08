@@ -4,7 +4,6 @@ from app import utils
 from app.models import User
 import xlwt, os
 
-
 post_bp = Blueprint('post', __name__)
 
 
