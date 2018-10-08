@@ -32,7 +32,7 @@ def config_network():
 
 @view_bp.route('/config_swj')
 def config_swj():
-    video_config = utils.readJson('config.json')
+    video_config = utils.readJson('./app/config.json')
     return render_template('config_swj.html', params=video_config['swj'])
 
 
@@ -43,7 +43,8 @@ def sys_upd():
 
 @view_bp.route('/sys_cpwd')
 def sys_cpwd():
-    return render_template('sys_cpwd.html')
+    user = session.get("user")
+    return render_template('sys_cpwd.html', user = user)
 
 
 @view_bp.route('/sys_log')

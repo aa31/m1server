@@ -14,41 +14,65 @@
 	    </div>
     </div>
     
-    <div class="tile col-md-3 col-sm-12 col-xs-12 a_sm_content">
+    <div class="tile col-md-4 col-sm-12 col-xs-12 a_sm_content">
     	<div class="tile-body row" >
     		<div class="col-md-12">
     			<div class="a_title" style="margin-bottom: 1.5em;">修改密码</div>
-    			<form class="form-horizontal">
+    			<form class="form-horizontal" id="form">
+					<input type="text" name="user" value="bezm" style="display: none">
     				<div class="form-group row">
 	                  <label class="control-label col-md-4 a_label2">旧密码：</label>
 	                  <div class="col-md-8">
-	                    <input class="form-control" type="text" placeholder="">
+	                    <input required  name="password" class="form-control" type="password" placeholder="">
 	                  </div>
 	                </div>
 	                <div class="form-group row">
 	                  <label class="control-label col-md-4 a_label2">新密码：</label>
 	                  <div class="col-md-8">
-	                    <input class="form-control" type="text" placeholder="">
+	                    <input required id="repassword"  name="repassword" class="form-control" type="password" placeholder="">
 	                  </div>
 	                </div>
 	                <div class="form-group row" style="margin-bottom: 2em;">
 	                  <label class="control-label col-md-4 a_label2">确认新密码：</label>
 	                  <div class="col-md-8">
-	                    <input class="form-control" type="text" placeholder="">
+	                    <input required id="repassword2"  name="repassword2" class="form-control" type="password" placeholder="">
 	                  </div>
 	                </div>
-	                
-	                
 	                <hr />
-	                
-	                <input style="margin-top: 1em;" class="btn btn-info" type="submit" name="" id="" value="确定" />
-	                
+	                <input style="margin-top: 1em;" class="btn btn-info" type="submit" name="" id="save" value="确定" />
     			</form>
     		</div>
     		
     	</div>
     </div>
     </main>
+{% endblock %}
+
+{% block js %}
+ <script type="text/javascript">
+	$('#form').on("submit",function(e){
+
+	    var password1 = $("#repassword2").val();
+	    var passwrd2 = $("#repassword").val();
+	    if(password1!=passwrd2){
+			layer.msg('密码不一致',{time: 2000});
+			e.preventDefault();
+			return;
+		}
+	    var serializeUrl = $("#form").serialize();
+	    $.post('/post/changepassword/',serializeUrl, function(res){
+			console.log(res);
+			if(res.code==101){
+				layer.msg('修改成功');
+				location.reload();
+			}else{
+			    alert('修改失败');
+			}
+		});
+		e.preventDefault();
+	})
+
+ </script>
 {% endblock %}
 
 

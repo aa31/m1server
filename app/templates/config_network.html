@@ -21,7 +21,7 @@
 
 	<div class="app-title">
 		<div>
-			<h1>网络信息{{params}}</h1>
+			<h1>网络信息</h1>
 			<!--<p>Start a beautiful journey here</p>-->
 		</div>
 	</div>
@@ -51,25 +51,25 @@
 					<div class="row a_row_item">
 						<label class="control-label col-md-3 a_label2 ">ip&emsp;&emsp;&emsp;：</label>
 		                  <div class="col-md-6">
-			                    <input id="ip" class="form-control " type="text " placeholder=" " value="{{params.ip}} ">
+			                    <input id="ip" class="form-control " type="text " placeholder=" " value="{{params.ip}}">
 		                  </div>
 					</div>
 					<div class="row a_row_item">
 						<label class="control-label col-md-3 a_label2 ">端口&emsp;&emsp;：</label>
 		                  <div class="col-md-6">
-			                    <input id="port" class="form-control " type="text " placeholder=" " value="{{params.port}} ">
+			                    <input id="port" class="form-control " type="text " placeholder=" " value="{{params.port}}">
 		                  </div>
 					</div>
 					<div class="row a_row_item">
 						<label class="control-label col-md-3 a_label2 ">子网掩码：</label>
 		                  <div class="col-md-6">
-			                    <input id="netmask" class="form-control " type="text " placeholder=" " value="{{params.netmask}} ">
+			                    <input id="netmask" class="form-control " type="text " placeholder=" " value="{{params.netmask}}">
 		                  </div>
 					</div>
 					<div class="row a_row_item">
 						<label class="control-label col-md-3 a_label2 ">网关&emsp;&emsp;：</label>
 		                  <div class="col-md-6">
-			                    <input id="gw" class="form-control " type="text " placeholder=" " value="{{params.gw}} ">
+			                    <input id="gw" class="form-control " type="text " placeholder=" " value="{{params.gw}}">
 		                  </div>
 					</div>
 					<div class="row a_row_item">
@@ -78,13 +78,13 @@
 			                    <input class="form-control " type="text " placeholder=" " value="255.255.255.0">
 		                  </div>
 					</div>
-					<div class="row a_row_item">
-						<label class="control-label col-md-3 a_label2 ">次DNS&emsp;：</label>
-		                  <div class="col-md-6">
-			                    <input class="form-control " type="text " placeholder=" " value=" ">
-		                  </div>
-		                  <div class="col-md-3" style="line-height: 3em;">无</div>
-					</div>
+					<!--<div class="row a_row_item">-->
+						<!--<label class="control-label col-md-3 a_label2 ">次DNS&emsp;：</label>-->
+		                  <!--<div class="col-md-6">-->
+			                    <!--<input class="form-control " type="text " placeholder=" " value=" ">-->
+		                  <!--</div>-->
+		                  <!--<div class="col-md-3" style="line-height: 3em;">无</div>-->
+					<!--</div>-->
 				</form>
 			</div>
 
@@ -92,9 +92,6 @@
 				<hr>
 				<div style="margin: 3em auto 1em auto;width: 100%;text-align: center;">
 					<input id="save" class="btn btn-info" type="button" value="确定"/>
-					
-					<a href="{{  url_for('post.changenetwork')  }}">确定</a>
-					
 					<button class="btn" style="margin-left: 2em;">取消</button>
 				</div>
 			</div>

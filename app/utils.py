@@ -1,8 +1,5 @@
-import psutil
-import time
-import math
-import json
-import os
+import os, hashlib, json, math, time, psutil
+from flask import jsonify
 
 
 # 网络信息
@@ -89,10 +86,12 @@ def readJson(filename):
 
 def jsonInit():
     # config.json
+    base = {"port": "9909", "host": "0.0.0.0"}
     video = {"resolution": "2", "coltype": "0", "target":"0,1"}
     swj = {"ip": "", "port": "", "rtsp": ""}
     network = {'ip': get_ip(), 'netmask': get_netmask(),'port':'9909', 'type': '1', 'gw': ''}
-    data = {"video": video, "swj": swj, "network":network}
+    user = {"user": "bezm", "password": "e10adc3949ba59abbe56e057f20f883e"}
+    data = {"video": video, "swj": swj, "network":network, "base":base, "user":user}
     createJson('./app/config.json', data)
     # videoParams.json
     resolution = {'0': "800*600", '1': "1024*768", '2': "1920*1080"}
@@ -100,6 +99,17 @@ def jsonInit():
     target = {'0': "四旋翼无人机", '1': "固定翼无人机",'2':'气球', '3':"风筝","4":"人","5":"车"}
     data = {'resolution': resolution, 'coltype': coltype, "target":target}
     createJson('./app/static/json/videoParams.json', data)
+
+
+def getApi(code, content, msg):
+    data = {'code':code, "data":content, "msg": msg}
+    return jsonify(data)
+
+
+def md5(str):
+    hl = hashlib.md5()
+    hl.update(str.encode('utf-8'))
+    return hl.hexdigest()
 
 
 if os.path.isfile("config.json"):

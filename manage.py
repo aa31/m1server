@@ -1,8 +1,9 @@
 from app import create_app
-
+from app import utils
 
 app = create_app()
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=9909)
+    basedata = utils.readJson('./app/config.json')
+    app.run(host=basedata["base"]["host"], port=basedata["base"]["port"])
     # manager.run()

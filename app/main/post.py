@@ -4,6 +4,7 @@ from app import utils
 from app.models import User
 import xlwt, os
 
+
 post_bp = Blueprint('post', __name__)
 
 
@@ -61,6 +62,7 @@ def reconfig_network():
         return getApi(102,None,"error")
 
 
+# 获取cpu 内存 硬盘
 @post_bp.route('/get_sysstatus', methods=['POST'])
 def get_sysstatus():
     params = {'cpu': utils.getCpuState(), 'mem': utils.getMemState(), 'disk': utils.getDiskState()}
@@ -72,20 +74,29 @@ def getAllConfig():
     return json.dumps(utils.readJson("./app/config.json"))
 
 
+# 登录接口
 @post_bp.route('/login', methods=['POST'])
 def postLogin():
     user = request.form.to_dict().get("user")
     password = request.form.to_dict().get("password")
     islong = request.form.to_dict().get("islong")
     password = md5(password)
-    data = User.query.filter(User.user_account==user, User.user_pwd==password).first()
-    if data:
-        session['uid'] = data.id
+    # data = User.query.filter(User.user_account==user, User.user_pwd==password).first()
+    configData = utils.readJson("./app/config.json")
+    if configData["user"]["user"] == user and configData["user"]["password"] == password:
+        session['user'] = user
         if islong:
             session.permanent = True
         return getApi("101", None, "ok")
     else:
         return getApi("102", None, "error")
+    # if data:
+    #     session['uid'] = data.id
+    #     if islong:
+    #         session.permanent = True
+    #     return getApi("101", None, "ok")
+    # else:
+    #     return getApi("102", None, "error")
     # data = []
     # for comment in dataSql:
     #     data.append(comment.to_json())
@@ -95,6 +106,23 @@ def postLogin():
 def loginout():
     session.pop('uid')
     return "{}"
+
+
+# 修改密码
+@post_bp.route('/changepassword/', methods=['POST'])
+def changepassword():
+    user = request.form.to_dict().get("user")
+    password = request.form.to_dict().get("password")
+    repassword = request.form.to_dict().get("repassword")
+    password = md5(password)
+    repassword = md5(repassword)
+    configData = utils.readJson("./app/config.json")
+    if configData["user"]["user"] == user and configData["user"]["password"] == password:
+        configData["user"]["password"] = repassword
+        utils.createJson('./app/config.json', configData)
+        return getApi("101", None, "ok")
+    else:
+        return getApi("102", None, "error")
 
 
 @post_bp.route("/downExcel", methods=['GET'])
@@ -124,6 +152,14 @@ def changenetwork():
     netmask = "255.255.255.0"
     gw = '192.168.1.1'
     os.system('sh ./app/sh/changenetwork.sh ' + ip + ' ' + netmask + ' ' + gw)
+    return "{}"
+
+
+# 更改系统时间
+@post_bp.route("/changesystime/", methods=['GET'])
+def changesystime():
+    time = "2018-10-10 10:10:10"
+    os.system('sh ./app/sh/changetime.sh' + ip)
     return "{}"
 
 

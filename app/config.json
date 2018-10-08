@@ -1,1 +1,1 @@
-{"video": {"resolution": "2", "coltype": "0", "target": "0,1"}, "swj": {"ip": "", "port": "", "rtsp": ""}, "network": {"ip": "192.168.0.190", "netmask": "255.255.255.0", "port": "9909", "type": "1", "gw": ""}}
+{"video": {"resolution": "2", "coltype": "0", "target": "0,1"}, "swj": {"ip": "", "port": "", "rtsp": ""}, "network": {"ip": "192.168.0.191", "netmask": "255.255.255.0", "port": "9909", "type": "1", "gw": ""}, "base": {"port": "9909", "host": "0.0.0.0"}, "user": {"user": "bezm", "password": "e10adc3949ba59abbe56e057f20f883e"}}
