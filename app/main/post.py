@@ -158,7 +158,7 @@ def changenetwork():
 
 
 # 更改系统时间
-@post_bp.route("/changesystime/", methods=['GET'])
+@post_bp.route("/changesystime/", methods=['POST'])
 def changesystime():
     time = "2018-10-10 10:10:10"
     os.system('sh ./app/sh/changetime.sh' + time)
