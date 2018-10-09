@@ -59,9 +59,9 @@
 {% block js %}
  <script type="text/javascript">
 		$("#save").click(function(){
-			alert();
 			$.post("/post/changesystime/",function(res){
 				console.log(res);
+				alert(res);
 			})
 		});
 

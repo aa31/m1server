@@ -7,6 +7,7 @@ import xlwt, os
 post_bp = Blueprint('post', __name__)
 
 
+# 修改视频源配置
 @post_bp.route('/reconfig_video', methods=['GET','POST'])
 def reconfig_video():
     # print(request.values )
@@ -20,6 +21,7 @@ def reconfig_video():
     return json.dumps(jsonData)
 
 
+# 修改上位机配置
 @post_bp.route('/reconfig_swj', methods=['GET','POST'])
 def reconfig_swj():
     jsonData = utils.readJson('./app/config.json')
@@ -101,6 +103,7 @@ def postLogin():
     #     data.append(comment.to_json())
 
 
+# 退出登录
 @post_bp.route('/loginout/', methods=['POST'])
 def loginout():
     session.pop('uid')
@@ -158,7 +161,7 @@ def changenetwork():
 @post_bp.route("/changesystime/", methods=['GET'])
 def changesystime():
     time = "2018-10-10 10:10:10"
-    os.system('sh ./app/sh/changetime.sh' + ip)
+    os.system('sh ./app/sh/changetime.sh' + time)
     return "{}"
 
 
